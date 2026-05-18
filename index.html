@@ -1,0 +1,1682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LabelWise Thesis Presentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css"
+    />
+    <link rel="icon" type="image/png" href="images/logo_transparent_background.png" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <img class="deck-footer-logo labelwise-fixed-novia" src="images/novia_uas.png" alt="Novia UAS logo" />
+      <div class="slides">
+        <section class="hero-slide labelwise-title-slide">
+          <div class="labelwise-title-bg" aria-hidden="true"></div>
+
+          <div class="labelwise-title-layout">
+            <header class="labelwise-title-topbar">
+              <p class="hero-kicker">Thesis Presentation, 28 May 2026</p>
+              <button
+                class="labelwise-logo-button"
+                type="button"
+                aria-label="Show LabelWise panda message"
+              >
+                <img
+                  class="labelwise-brand-logo"
+                  src="images/logo_transparent_background.png"
+                  alt="LabelWise logo"
+                />
+                <span class="labelwise-panda-scene" aria-hidden="true">
+                  <svg viewBox="0 0 260 150" role="img">
+                    <g class="panda-walk">
+                      <ellipse class="panda-shadow" cx="78" cy="128" rx="34" ry="8" />
+                      <g class="panda-body">
+                        <circle class="panda-ear" cx="50" cy="48" r="16" />
+                        <circle class="panda-ear" cx="104" cy="48" r="16" />
+                        <circle class="panda-head" cx="77" cy="70" r="38" />
+                        <ellipse class="panda-eye" cx="62" cy="68" rx="10" ry="13" />
+                        <ellipse class="panda-eye" cx="92" cy="68" rx="10" ry="13" />
+                        <circle class="panda-eye-dot" cx="64" cy="66" r="3" />
+                        <circle class="panda-eye-dot" cx="94" cy="66" r="3" />
+                        <ellipse class="panda-nose" cx="78" cy="80" rx="6" ry="4" />
+                        <path class="panda-mouth panda-mouth-neutral" d="M72 88 Q78 92 84 88" />
+                        <path class="panda-mouth panda-mouth-smile" d="M68 87 Q78 98 88 87" />
+                      </g>
+                      <g class="food-pack">
+                        <rect class="scan-glow" x="112" y="71" width="56" height="42" rx="8" />
+                        <rect x="116" y="75" width="48" height="34" rx="6" />
+                        <line x1="124" y1="86" x2="156" y2="86" />
+                        <line x1="124" y1="95" x2="150" y2="95" />
+                        <line class="scan-line" x1="118" y1="79" x2="162" y2="79" />
+                      </g>
+                      <g class="bite-mark">
+                        <circle cx="159" cy="78" r="6" />
+                        <circle cx="164" cy="87" r="5" />
+                      </g>
+                    </g>
+                    <g class="thought-bubble">
+                      <rect x="118" y="15" width="112" height="31" rx="15" />
+                      <text x="174" y="35">Can I eat this?</text>
+                    </g>
+                    <g class="result-bubble">
+                      <rect x="122" y="52" width="104" height="31" rx="15" />
+                      <circle class="success-check-bg" cx="138" cy="67" r="9" />
+                      <path class="success-check" d="M134 67 L137 70 L143 63" />
+                      <text x="174" y="72">Looks suitable</text>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </header>
+
+            <main class="labelwise-title-main">
+              <div class="labelwise-title-copy">
+                <h1>LabelWise</h1>
+                <p class="labelwise-subtitle">
+                  A Mobile AI-Based Decision Support System for Personalized
+                  Food Label Interpretation
+                </p>
+                <p class="labelwise-presenter">Suresh Lama</p>
+
+                <div class="labelwise-title-meta" aria-label="Presentation details">
+                  <p>Master of Engineering (UAS), Intelligent Systems</p>
+                  <p>Novia University of Applied Sciences, Vaasa</p>
+                  <p>Supervisor: Ray Pörn</p>
+                </div>
+              </div>
+
+              <figure class="labelwise-phone-frame">
+                <img
+                  class="labelwise-phone-screen"
+                  src="images/screenshot/barcode_scan.jpg"
+                  alt="LabelWise barcode scanning screen"
+                />
+              </figure>
+            </main>
+
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-problem-slide">
+          <div class="problem-slide-layout">
+            <div class="problem-copy-panel">
+              <p class="problem-kicker">Decision Paralysis</p>
+              <h2>Food labels give information, but not always a personal decision</h2>
+              <strong>
+                Information exists. Interpretation is fragmented. The personal
+                decision remains difficult.
+              </strong>
+            </div>
+            <figure class="problem-image-stage">
+              <img
+                src="images/slide2.png"
+                alt="Food label information shown as fragmented product details"
+              />
+            </figure>
+            <div class="problem-bottom-bar">
+              The challenge is not only access to food information, but turning
+              it into a clear personal decision.
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-interpretation-slide">
+          <div class="interpretation-slide-layout">
+            <div class="interpretation-copy-panel">
+              <p class="problem-kicker">Shopping Pressure</p>
+              <h2>Why Food Labels Are Hard to Interpret</h2>
+              <p>
+                Food labels provide product information, but consumers still have
+                to interpret what that information means for their own dietary
+                needs.
+              </p>
+            </div>
+            <figure class="interpretation-image-stage">
+              <img
+                src="images/slide3.png"
+                alt="Factors that make food label interpretation difficult"
+              />
+              <figcaption class="interpretation-factor-tags">
+                <span>Technical terms</span>
+                <span>Language barriers</span>
+                <span>Hidden dietary relevance</span>
+                <span>Shopping pressure</span>
+              </figcaption>
+            </figure>
+            <div class="problem-bottom-bar interpretation-bottom-bar">
+              Consumers must connect dense product information with personal dietary
+              context under real shopping conditions.
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-finland-slide">
+          <div class="finland-slide-layout">
+            <div class="finland-context-panel">
+              <p class="problem-kicker">Local Context</p>
+              <h2>Why This Matters in Finland</h2>
+              <p class="finland-main-message">
+                Food labels are often in Finnish and Swedish. For many consumers,
+                translation is only the first step.
+              </p>
+              <p class="finland-core-line">The real task is deciding dietary suitability.</p>
+            </div>
+
+            <div class="finland-chain-panel">
+              <p class="finland-chain-label">From label to decision</p>
+
+              <div class="finland-decision-chain" aria-label="Decision chain from label to personal suitability">
+                <div class="finland-chain-step">
+                  <span class="finland-step-number">1</span>
+                  <span class="finland-step-text">Finnish/Swedish label</span>
+                </div>
+                <div class="finland-chain-step">
+                  <span class="finland-step-number">2</span>
+                  <span class="finland-step-text">Translate terms</span>
+                </div>
+                <div class="finland-chain-step">
+                  <span class="finland-step-number">3</span>
+                  <span class="finland-step-text">Understand dietary meaning</span>
+                </div>
+                <div class="finland-chain-step">
+                  <span class="finland-step-number">4</span>
+                  <span class="finland-step-text">Compare with personal needs</span>
+                </div>
+                <div class="finland-chain-step finland-decision-step">
+                  <span class="finland-step-number">5</span>
+                  <span class="finland-step-text">Decide</span>
+                </div>
+              </div>
+
+              <div class="finland-outcome-chips" aria-label="Decision outcomes">
+                <span>Suitable</span>
+                <span>Unsuitable</span>
+                <span>Uncertain</span>
+              </div>
+            </div>
+
+            <div class="problem-bottom-bar finland-bottom-bar">
+              Translation can explain words, but not dietary suitability.
+            </div>
+
+            <p class="finland-source-note">
+              Source: Finnish Food Authority states that mandatory labelling for
+              prepacked foods in Finland must generally be provided in Finnish
+              and Swedish, with municipality-specific exceptions.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-aim-slide">
+          <div class="aim-slide-layout">
+            <div class="aim-copy">
+              <p class="problem-kicker">Thesis Aim</p>
+              <h2>Personalized Food Label Interpretation</h2>
+              <p>
+                This thesis designs, implements, and evaluates a mobile
+                AI-supported prototype for personalized food label
+                interpretation.
+              </p>
+            </div>
+
+            <div class="aim-flow" aria-label="Thesis aim flow">
+              <article class="fragment">
+                <div class="aim-icon" aria-hidden="true">▦</div>
+                <span>01</span>
+                <h3>Product Input</h3>
+                <p>Barcode scan / label image</p>
+                <p>Product database / OCR</p>
+              </article>
+              <article class="fragment">
+                <div class="aim-icon" aria-hidden="true">◉</div>
+                <span>02</span>
+                <h3>Dietary Context</h3>
+                <p>Allergy / medical</p>
+                <p>Religious-cultural / ethical / lifestyle</p>
+              </article>
+              <article class="fragment">
+                <div class="aim-icon" aria-hidden="true">✦</div>
+                <span>03</span>
+                <h3>Hybrid Analysis</h3>
+                <p>Defined rules</p>
+                <p>GPT-4.1 interpretation</p>
+              </article>
+              <article class="fragment">
+                <div class="aim-icon" aria-hidden="true">✓</div>
+                <span>04</span>
+                <h3>Explainable Result</h3>
+                <p>Suitable / warning / unsuitable / uncertain</p>
+                <p>Explanation, confidence, uncertainty</p>
+              </article>
+            </div>
+
+            <p class="aim-boundary">
+              The goal is decision support, not final dietary authority.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-rq-slide">
+          <div class="rq-slide-layout">
+            <div class="rq-header">
+              <p class="problem-kicker">Research Questions</p>
+              <h2>From Problem to Evaluation</h2>
+            </div>
+
+            <div class="rq-grid" aria-label="Research questions">
+              <article class="fragment">
+                <div class="rq-card-top">
+                  <span>RQ1</span>
+                  <div class="rq-icon" aria-hidden="true">?</div>
+                </div>
+                <h3>Food label difficulty</h3>
+                <p>
+                  What practical difficulties do users face when interpreting
+                  food labels in Finland?
+                </p>
+              </article>
+              <article class="fragment">
+                <div class="rq-card-top">
+                  <span>RQ2</span>
+                  <div class="rq-icon" aria-hidden="true">▤</div>
+                </div>
+                <h3>Personalized mobile support</h3>
+                <p>
+                  How can a mobile application support personalized food label
+                  interpretation using dietary preferences defined by the user?
+                </p>
+              </article>
+              <article class="fragment">
+                <div class="rq-card-top">
+                  <span>RQ3</span>
+                  <div class="rq-icon" aria-hidden="true">✦</div>
+                </div>
+                <h3>Hybrid analysis</h3>
+                <p>
+                  How can filtering based on rules and interpretation supported
+                  by AI be combined to provide explainable dietary decision
+                  support?
+                </p>
+              </article>
+              <article class="fragment">
+                <div class="rq-card-top">
+                  <span>RQ4</span>
+                  <div class="rq-icon" aria-hidden="true">!</div>
+                </div>
+                <h3>Reliability limits</h3>
+                <p>
+                  What limitations affect the reliability of the LabelWise
+                  prototype and its future lightweight model pathway?
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-study-slide">
+          <div class="study-slide-layout">
+            <div class="study-header">
+              <p class="problem-kicker">User Study Overview</p>
+              <h2>Survey Evidence for Requirements</h2>
+            </div>
+
+            <div class="study-pipeline" aria-label="Survey to requirements pipeline">
+              <div class="study-pipeline-line" aria-hidden="true"></div>
+              <article class="fragment">
+                <span>01</span>
+                <h3>109 survey responses</h3>
+              </article>
+              <article class="fragment">
+                <span>02</span>
+                <h3>Difficulties &amp; themes</h3>
+              </article>
+              <article class="fragment">
+                <span>03</span>
+                <h3>Key findings</h3>
+              </article>
+              <article class="fragment">
+                <span>04</span>
+                <h3>Requirements</h3>
+              </article>
+              <article class="fragment">
+                <span>05</span>
+                <h3>Design decisions</h3>
+              </article>
+            </div>
+
+            <div class="study-focus-card fragment" aria-label="Survey focus areas">
+              <p>The survey focused on five areas:</p>
+              <ol class="study-signal-grid">
+                <li><span>01</span>Food label reading habits</li>
+                <li><span>02</span>Difficulty with Finnish and Swedish labels</li>
+                <li><span>03</span>Dietary needs and ingredient concerns</li>
+                <li><span>04</span>Current workarounds</li>
+                <li><span>05</span>Privacy expectations and desired app features</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-difficulties-slide">
+          <div class="difficulties-slide-layout">
+            <div class="difficulties-copy">
+              <p class="problem-kicker">Main Label Difficulties</p>
+              <h2>Language Leads, but It Is Not the Only Barrier</h2>
+              <p>
+                Respondents also struggled with technical terms and dietary
+                meaning.
+              </p>
+            </div>
+
+            <div class="difficulty-chart" aria-label="Main food label difficulties reported in the survey">
+              <div class="difficulty-bar" style="--value: 90.8; --i: 0">
+                <span class="difficulty-label">Finnish or Swedish language barrier</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>90.8%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 60.6; --i: 1">
+                <span class="difficulty-label">Small text size</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>60.6%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 42.2; --i: 2">
+                <span class="difficulty-label">Multiple mixed ingredients</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>42.2%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 33.9; --i: 3">
+                <span class="difficulty-label">Additives or E-numbers</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>33.9%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 33.9; --i: 4">
+                <span class="difficulty-label">Hidden animal ingredients</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>33.9%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 33; --i: 5">
+                <span class="difficulty-label">Scientific names</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>33.0%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 24.8; --i: 6">
+                <span class="difficulty-label">Allergens not clearly highlighted</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>24.8%</strong>
+              </div>
+              <div class="difficulty-bar" style="--value: 22.9; --i: 7">
+                <span class="difficulty-label">Confusing nutrition tables</span>
+                <span class="difficulty-track"><span></span></span>
+                <strong>22.9%</strong>
+              </div>
+            </div>
+
+            <div class="difficulty-insight">
+              <strong>90.8%</strong>
+              <p>
+                selected language difficulty, but technical and dietary barriers
+                were also reported.
+              </p>
+            </div>
+
+            <p class="difficulty-bottom-line">
+              The problem is broader than translation. Users need contextual
+              interpretation.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-workarounds-slide">
+          <div class="workarounds-slide-layout">
+            <div class="workarounds-copy">
+              <p class="problem-kicker">Current Workarounds</p>
+              <h2>Support Exists, but the Workflow Is Fragmented</h2>
+              <p>
+                Participants already use multiple tools, but the decision still
+                requires repeated checking across separate services.
+              </p>
+
+              <div class="workaround-data" aria-label="Current workaround tools reported by participants">
+                <span><strong>85.3%</strong> Google Translate / Lens</span>
+                <span><strong>63.3%</strong> Google Search</span>
+                <span><strong>60.6%</strong> ChatGPT</span>
+                <span><strong>27.5%</strong> Asking friends</span>
+                <span><strong>25.7%</strong> Nutrition tables</span>
+                <span><strong>4.6%</strong> No tool</span>
+              </div>
+            </div>
+
+            <div class="workaround-loop" aria-label="Fragmented current workaround flow">
+              <svg class="workaround-loop-lines" viewBox="0 0 520 340" aria-hidden="true">
+                <path class="loop-path" d="M102 78 C208 20 330 20 420 92" />
+                <path class="loop-path" d="M438 112 C496 190 438 284 320 294" />
+                <path class="loop-path" d="M286 302 C178 314 72 258 78 158" />
+                <path class="loop-path loop-path-back" d="M332 260 C260 216 210 176 140 128" />
+              </svg>
+              <article class="loop-node loop-node-label" style="--i: 0">
+                <span>01</span>
+                <strong>Food label</strong>
+              </article>
+              <article class="loop-node loop-node-translate" style="--i: 1">
+                <span>02</span>
+                <strong>Translate / Lens</strong>
+              </article>
+              <article class="loop-node loop-node-search" style="--i: 2">
+                <span>03</span>
+                <strong>Search</strong>
+              </article>
+              <article class="loop-node loop-node-ai" style="--i: 3">
+                <span>04</span>
+                <strong>Ask AI</strong>
+              </article>
+              <article class="loop-node loop-node-friend" style="--i: 4">
+                <span>05</span>
+                <strong>Ask others</strong>
+              </article>
+              <article class="loop-node loop-node-manual" style="--i: 5">
+                <span>06</span>
+                <strong>Manual comparison</strong>
+              </article>
+              <article class="loop-node loop-node-uncertain" style="--i: 6">
+                <span>?</span>
+                <strong>Still uncertain</strong>
+              </article>
+            </div>
+
+            <div class="privacy-warning">
+              <span>Privacy concern</span>
+              <strong>Personal dietary context may be shared repeatedly across services.</strong>
+            </div>
+
+            <p class="workaround-bottom-line">
+              The issue is not lack of effort. The issue is high-friction,
+              fragmented interpretation.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-dietary-slide">
+          <div class="dietary-slide-layout">
+            <div class="dietary-copy">
+              <p class="problem-kicker">Dietary Needs and Ingredient Concerns</p>
+              <h2>Same Product, Different Dietary Meaning</h2>
+              <p>
+                Generic product information is not enough when suitability
+                depends on personal dietary context.
+              </p>
+            </div>
+
+            <div class="dietary-evidence-panel">
+              <div>
+                <span>Dietary needs</span>
+                <p>
+                  Religious/cultural rules, lifestyle preferences,
+                  allergy-related needs, medical needs
+                </p>
+              </div>
+              <div>
+                <span>Why this matters</span>
+                <p>
+                  The same ingredient can be harmless, restricted, risky, or
+                  uncertain depending on the person.
+                </p>
+              </div>
+            </div>
+
+            <div class="ingredient-chart" aria-label="Ingredient concerns reported in the survey">
+              <p>Confusing ingredients are common</p>
+              <div class="ingredient-bar" style="--value: 73.4; --i: 0">
+                <span>Ingredients never heard of</span>
+                <span class="ingredient-track"><span></span></span>
+                <strong>73.4%</strong>
+              </div>
+              <div class="ingredient-bar" style="--value: 57.8; --i: 1">
+                <span>Additives / E-codes</span>
+                <span class="ingredient-track"><span></span></span>
+                <strong>57.8%</strong>
+              </div>
+              <div class="ingredient-bar" style="--value: 54.1; --i: 2">
+                <span>Preservatives</span>
+                <span class="ingredient-track"><span></span></span>
+                <strong>54.1%</strong>
+              </div>
+              <div class="ingredient-bar" style="--value: 48.6; --i: 3">
+                <span>Flavour enhancers</span>
+                <span class="ingredient-track"><span></span></span>
+                <strong>48.6%</strong>
+              </div>
+              <div class="ingredient-bar" style="--value: 43.1; --i: 4">
+                <span>Protein isolates</span>
+                <span class="ingredient-track"><span></span></span>
+                <strong>43.1%</strong>
+              </div>
+              <div class="ingredient-bar" style="--value: 39.4; --i: 5">
+                <span>Enzymes</span>
+                <span class="ingredient-track"><span></span></span>
+                <strong>39.4%</strong>
+              </div>
+            </div>
+
+            <p class="dietary-bottom-line">
+              Generic product information is not enough when suitability depends
+              on the user's dietary context.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-usefulness-slide">
+          <div class="usefulness-slide-layout">
+            <div class="usefulness-header">
+              <p class="problem-kicker">App Usefulness and Privacy Findings</p>
+              <h2>Users Wanted Support, but Also Expected Privacy</h2>
+              <p>
+                The survey justified the app concept while making privacy a core
+                design requirement.
+              </p>
+            </div>
+
+            <div class="usefulness-dashboard">
+              <article class="demand-panel fragment">
+                <span class="panel-label">Demand</span>
+                <div class="usefulness-ring" style="--value: 76.1">
+                  <strong>76.1%</strong>
+                </div>
+                <h3>found the app concept useful</h3>
+                <p>19.3% maybe · 4.6% no</p>
+              </article>
+
+              <article class="privacy-panel fragment">
+                <span class="panel-label">Trust requirement</span>
+                <strong>80.7%</strong>
+                <h3>rated privacy important or very important</h3>
+                <p>
+                  Dietary preferences may reveal health, religion, culture,
+                  ethics, or lifestyle context.
+                </p>
+              </article>
+
+              <article class="feature-panel fragment">
+                <span class="panel-label">Feature priorities</span>
+                <ol>
+                  <li><span>85.3%</span> Translate Finnish/Swedish terms</li>
+                  <li><span>84.4%</span> Scan and show suitability</li>
+                  <li><span>60.6%</span> Explain the reason</li>
+                  <li><span>42.2%</span> Detect hidden ingredients</li>
+                  <li><span>35.8%</span> Show allergens and additives</li>
+                </ol>
+              </article>
+            </div>
+
+            <p class="usefulness-bottom-line fragment">
+              LabelWise needed to be useful, explainable, and privacy-conscious
+              from the start.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-requirements-slide">
+          <div class="requirements-slide-layout">
+            <div class="requirements-header">
+              <p class="problem-kicker">Requirements Derived from Survey</p>
+              <h2>From User Evidence to LabelWise Requirements</h2>
+            </div>
+
+            <div class="requirements-tree" aria-label="Survey evidence converted into requirement groups">
+              <div class="evidence-root-system fragment" data-fragment-index="1" aria-label="Survey evidence roots">
+                <span>Language difficulty</span>
+                <span>Ingredient uncertainty</span>
+                <span>Dietary needs</span>
+                <span>Fragmented workarounds</span>
+                <span>Privacy expectations</span>
+              </div>
+
+              <div class="requirements-growth-stage">
+                <div class="requirements-growth-lines fragment" data-fragment-index="2" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="survey-node">
+                  <span>Survey evidence</span>
+                  <strong>109 responses</strong>
+                </div>
+
+                <div class="requirement-trunk fragment" data-fragment-index="3">
+                  <span>Translated into design decisions</span>
+                </div>
+              </div>
+
+              <div class="requirement-branch-links fragment" data-fragment-index="4" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="requirement-branch-grid">
+                <article class="requirement-branch requirement-branch-functional fragment" data-fragment-index="5">
+                  <span>Functional</span>
+                  <h3>What the system must do</h3>
+                  <p>
+                    Barcode scan, product lookup, image input, OCR fallback,
+                    preference setup, personalized result, explanation.
+                  </p>
+                </article>
+                <article class="requirement-branch requirement-branch-quality fragment" data-fragment-index="6">
+                  <span>Non-functional</span>
+                  <h3>How the system should behave</h3>
+                  <p>
+                    Simple interface, practical response time, privacy-conscious
+                    handling, explainable output, uncertainty communication.
+                  </p>
+                </article>
+                <article class="requirement-branch requirement-branch-future fragment" data-fragment-index="7">
+                  <span>Future growth</span>
+                  <h3>What the system should support next</h3>
+                  <p>
+                    Backend review, curated teacher records, lightweight model
+                    experimentation, confidence validation.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-intro-slide">
+          <div class="intro-slide-layout">
+            <div class="intro-header">
+              <p class="problem-kicker">From Requirements to Prototype</p>
+              <h2>What LabelWise Is</h2>
+              <p class="intro-definition">
+                LabelWise is a mobile AI-supported system that helps users
+                interpret packaged food labels using their own dietary
+                preferences and restrictions.
+              </p>
+            </div>
+
+            <div class="intro-visual fragment" data-fragment-index="1">
+              <figure class="labelwise-phone-frame intro-phone-frame">
+                <img
+                  class="labelwise-phone-screen"
+                  src="images/screenshot/result.jpg"
+                  alt="LabelWise personalized result screen"
+                />
+              </figure>
+              <p class="intro-caption">
+                Personalized result with explanation, confidence, and feedback
+              </p>
+            </div>
+
+            <div class="intro-card-grid" aria-label="LabelWise capabilities">
+              <article class="intro-card fragment" data-fragment-index="2">
+                <span class="intro-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="4" y="5" width="3" height="14" rx="1" />
+                    <rect x="9" y="5" width="2" height="14" rx="1" />
+                    <rect x="13" y="5" width="4" height="14" rx="1" />
+                    <rect x="19" y="5" width="1" height="14" rx="0.5" />
+                  </svg>
+                </span>
+                <div class="intro-card-copy">
+                  <h3>Mobile product input</h3>
+                  <p>Barcode and label image input for shopping.</p>
+                </div>
+              </article>
+              <article class="intro-card fragment" data-fragment-index="3">
+                <span class="intro-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 7h14M8 12h8M10 17h4" />
+                    <circle cx="6" cy="7" r="1.3" />
+                    <circle cx="12" cy="12" r="1.3" />
+                    <circle cx="8" cy="17" r="1.3" />
+                  </svg>
+                </span>
+                <div class="intro-card-copy">
+                  <h3>User-defined preferences</h3>
+                  <p>Allergies, medical, cultural, ethical, lifestyle preferences.</p>
+                </div>
+              </article>
+              <article class="intro-card fragment" data-fragment-index="4">
+                <span class="intro-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 16c2.8 0 3.2-3 5.2-3s2.2 3 5.4 3 3.1-3 3.1-3" />
+                    <path d="M6 8l4 4 4-4" />
+                    <path d="M14 8l4 4" />
+                  </svg>
+                </span>
+                <div class="intro-card-copy">
+                  <h3>Hybrid analysis</h3>
+                  <p>Rules for known cases. GPT-4.1 for ambiguous ones.</p>
+                </div>
+              </article>
+              <article class="intro-card fragment" data-fragment-index="5">
+                <span class="intro-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3l7 4v5c0 4-2.8 6.8-7 9-4.2-2.2-7-5-7-9V7l7-4z" />
+                    <path d="M9.5 12.5l1.8 1.8 3.5-4.2" />
+                  </svg>
+                </span>
+                <div class="intro-card-copy">
+                  <h3>Explainable decision support</h3>
+                  <p>Suitability, concerns, confidence, uncertainty.</p>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-boundary-slide">
+          <div class="boundary-slide-layout">
+            <div class="boundary-header">
+              <p class="problem-kicker">System Boundaries</p>
+              <h2>Decision Support, Not Final Authority</h2>
+            </div>
+
+            <div class="boundary-map" aria-label="LabelWise support and authority boundaries">
+              <article class="boundary-panel boundary-support fragment" data-fragment-index="1">
+                <div class="boundary-panel-heading">
+                  <span class="boundary-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M20 7L10 17l-5-5" />
+                    </svg>
+                  </span>
+                  <div>
+                    <span>Decision Support</span>
+                    <h3>What LabelWise supports</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li><strong>Interpret labels</strong><span>Connects product information with selected preferences.</span></li>
+                  <li><strong>Highlight conflicts</strong><span>Shows ingredients, allergens, additives, and uncertainty.</span></li>
+                  <li><strong>Explain results</strong><span>Provides reasoning, confidence, and uncertainty messages.</span></li>
+                  <li><strong>Support judgement</strong><span>Helps reduce confusion during shopping.</span></li>
+                </ul>
+              </article>
+
+              <div class="boundary-divider" aria-hidden="true">
+                <span>Boundary</span>
+              </div>
+
+              <article class="boundary-panel boundary-limits fragment" data-fragment-index="2">
+                <div class="boundary-panel-heading">
+                  <span class="boundary-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3l7 4v5c0 4-2.8 6.8-7 9-4.2-2.2-7-5-7-9V7l7-4z" />
+                      <path d="M8 8l8 8" />
+                    </svg>
+                  </span>
+                  <div>
+                    <span>Not Certification</span>
+                    <h3>What LabelWise does not replace</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li><strong>Medical advice</strong><span>No diagnosis, prescription, or clinical guidance.</span></li>
+                  <li><strong>Allergen declarations</strong><span>No guarantee of allergen-free safety.</span></li>
+                  <li><strong>Religious certification</strong><span>No halal, kosher, Jain, or official compliance certification.</span></li>
+                  <li><strong>Nutrition authority</strong><span>Not a dietitian or professional nutrition service.</span></li>
+                  <li><strong>User responsibility</strong><span>The final decision remains with the user.</span></li>
+                </ul>
+              </article>
+            </div>
+
+            <p class="boundary-takeaway fragment" data-fragment-index="4">
+              LabelWise reduces interpretation friction. The final decision
+              remains with the user.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-workflow-slide">
+          <div class="workflow-slide-layout">
+            <div class="workflow-header">
+              <p class="problem-kicker">LabelWise Workflow</p>
+              <h2>From Product Input to Personalized Result</h2>
+            </div>
+
+            <div class="workflow-pipeline" aria-label="LabelWise mobile workflow">
+              <!-- Mobile: vertical rail spanning all steps -->
+              <div class="workflow-rail" aria-hidden="true">
+                <span></span>
+              </div>
+
+              <div class="workflow-top-row">
+                <div class="workflow-rail" aria-hidden="true">
+                  <span></span>
+                </div>
+
+                <article class="workflow-step fragment" data-fragment-index="1">
+                  <span class="workflow-step-number">01</span>
+                  <span class="workflow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M4 7h10" />
+                      <path d="M18 7h2" />
+                      <path d="M4 17h2" />
+                      <path d="M10 17h10" />
+                      <path d="M14 5v4" />
+                      <path d="M8 15v4" />
+                    </svg>
+                  </span>
+                  <h3>Set Preferences</h3>
+                  <div class="workflow-chips">
+                    <span>Culture</span>
+                    <span>Ethical</span>
+                    <span>Allergy</span>
+                    <span>Medical</span>
+                    <span>Lifestyle</span>
+                  </div>
+                </article>
+
+                <article class="workflow-step fragment" data-fragment-index="2">
+                  <span class="workflow-step-number">02</span>
+                  <span class="workflow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M4 7V5h2" />
+                      <path d="M18 5h2v2" />
+                      <path d="M20 17v2h-2" />
+                      <path d="M6 19H4v-2" />
+                      <path d="M7 9v6" />
+                      <path d="M10 9v6" />
+                      <path d="M14 9v6" />
+                      <path d="M17 9v6" />
+                    </svg>
+                  </span>
+                  <h3>Scan or Upload</h3>
+                  <div class="workflow-chips">
+                    <span>Barcode</span>
+                    <span>Camera</span>
+                    <span>Gallery</span>
+                  </div>
+                </article>
+
+                <article class="workflow-step fragment" data-fragment-index="3">
+                  <span class="workflow-step-number">03</span>
+                  <span class="workflow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <ellipse cx="12" cy="6" rx="7" ry="3" />
+                      <path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" />
+                      <path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+                    </svg>
+                  </span>
+                  <h3>Retrieve Data</h3>
+                  <div class="workflow-chips">
+                    <span>Open Food Facts</span>
+                    <span>OCR fallback</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="workflow-z-connector" aria-hidden="true">
+                <svg viewBox="0 0 100 36" preserveAspectRatio="none">
+                  <path d="M93 0 V16 Q93 18 91 18 H9 Q7 18 7 20 V36" fill="none" stroke="rgba(31,122,77,0.35)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4"/>
+                  <path d="M7 36 L3.5 30 H10.5 Z" fill="rgba(31,122,77,0.4)"/>
+                </svg>
+              </div>
+
+              <div class="workflow-bottom-row">
+                <div class="workflow-rail" aria-hidden="true">
+                  <span></span>
+                </div>
+
+                <article class="workflow-step workflow-step-analyze fragment" data-fragment-index="4">
+                  <span class="workflow-step-number">04</span>
+                  <span class="workflow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M5 12l4 4 10-10" />
+                      <path d="M4 5h7" />
+                      <path d="M4 19h7" />
+                      <path d="M15 15h5" />
+                    </svg>
+                  </span>
+                  <h3>Analyze</h3>
+                  <div class="workflow-chips">
+                    <span>Rules</span>
+                    <span>GPT-4.1 support</span>
+                  </div>
+                </article>
+
+                <article class="workflow-step fragment" data-fragment-index="5">
+                  <span class="workflow-step-number">05</span>
+                  <span class="workflow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M6 4h12v16H6z" />
+                      <path d="M9 8h6" />
+                      <path d="M9 12h6" />
+                      <path d="M9 16h3" />
+                    </svg>
+                  </span>
+                  <h3>Generate Result</h3>
+                  <div class="workflow-chips">
+                    <span>Status</span>
+                    <span>Explanation</span>
+                    <span>Confidence</span>
+                    <span>Uncertainty</span>
+                  </div>
+                </article>
+
+                <article class="workflow-step fragment" data-fragment-index="6">
+                  <span class="workflow-step-number">06</span>
+                  <span class="workflow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M5 5v14h14" />
+                      <path d="M8 16l3-3 3 2 4-6" />
+                      <path d="M18 9h-4V5" />
+                    </svg>
+                  </span>
+                  <h3>Save and Review</h3>
+                  <div class="workflow-chips">
+                    <span>History</span>
+                    <span>Review</span>
+                    <span>Curation</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <p class="workflow-takeaway fragment" data-fragment-index="7">
+              The workflow turns fragmented label information into structured
+              dietary decision support.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-architecture-slide">
+          <div class="architecture-slide-layout">
+            <div class="architecture-header">
+              <p class="problem-kicker">System Architecture</p>
+              <h2>Current App Flow + Student Model Pathway</h2>
+            </div>
+
+            <div class="architecture-flowchart architecture-flowchart-v2" aria-label="LabelWise system architecture flowchart">
+              <div class="architecture-current-row">
+                <article class="architecture-phone-card fragment" data-fragment-index="1">
+                <div class="architecture-phone-shell" aria-hidden="true">
+                  <img src="images/screenshot/barcode_scan.jpg" alt="" />
+                </div>
+                <div class="architecture-phone-copy">
+                  <span class="architecture-eyebrow">Mobile App</span>
+                  <h3>LabelWise</h3>
+                  <div class="architecture-mini-flow">
+                    <span>Profile / preferences</span>
+                    <span>Scan / upload</span>
+                    <span>Local scan history</span>
+                  </div>
+                </div>
+                </article>
+
+                <div class="architecture-flow-arrow architecture-flow-arrow-solid fragment" data-fragment-index="2" aria-hidden="true"></div>
+
+                <article class="architecture-node architecture-data fragment" data-fragment-index="2">
+                  <span class="architecture-eyebrow">Product Data Sources</span>
+                  <h3>Barcode or image?</h3>
+                  <div class="architecture-decision-options">
+                    <div>
+                      <strong>Barcode lookup</strong>
+                      <span>Open Food Facts</span>
+                    </div>
+                    <div>
+                      <strong>OCR fallback</strong>
+                      <span>Camera / gallery</span>
+                    </div>
+                  </div>
+                </article>
+
+                <div class="architecture-flow-arrow architecture-flow-arrow-solid fragment" data-fragment-index="3" aria-hidden="true"></div>
+
+                <article class="architecture-node architecture-result fragment" data-fragment-index="3">
+                  <span class="architecture-eyebrow">Result</span>
+                  <h3>Personalized decision support</h3>
+                  <ul class="architecture-list architecture-result-list">
+                    <li><strong>Decision</strong><span>Suitable / unsuitable / uncertain</span></li>
+                    <li><strong>Explanation</strong><span>Personal dietary reason</span></li>
+                    <li><strong>Confidence</strong><span>Uncertainty shown when needed</span></li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="architecture-split-row" aria-hidden="true">
+                <div class="architecture-return-path fragment" data-fragment-index="3">
+                  <span>Result saved to local scan history</span>
+                </div>
+                <div class="architecture-down-path fragment" data-fragment-index="4">
+                  <svg viewBox="0 0 100 38" preserveAspectRatio="none" focusable="false">
+                    <defs>
+                      <marker id="architecture-red-arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                        <path d="M0,0 L8,4 L0,8 Z"></path>
+                      </marker>
+                    </defs>
+                    <path d="M84 0 C84 13 75 26 64 31 C59 34 55 35 52 36"></path>
+                  </svg>
+                  <span>Teacher records for curation</span>
+                </div>
+              </div>
+
+              <div class="architecture-learning-row">
+                <article class="architecture-node architecture-distill fragment" data-fragment-index="4">
+                  <span class="architecture-eyebrow">Knowledge Distillation</span>
+                  <h3>Data curation pipeline</h3>
+                  <ol class="architecture-sequence">
+                    <li>FastAPI dashboard</li>
+                    <li>Teacher records</li>
+                    <li>Review + curation</li>
+                    <li>Export batches</li>
+                    <li>Colab distillation</li>
+                    <li>Version tracking</li>
+                  </ol>
+                </article>
+
+                <div class="architecture-flow-arrow architecture-flow-arrow-dashed fragment" data-fragment-index="5" aria-hidden="true"></div>
+
+                <article class="architecture-node architecture-student fragment" data-fragment-index="5">
+                  <span class="architecture-eyebrow">Student Model Pathway</span>
+                  <h3>Lightweight inference path</h3>
+                  <div class="architecture-tags">
+                    <span>Qwen2.5-3B-Instruct + Hugging Face artifacts</span>
+                  </div>
+                  <div class="architecture-subcard architecture-status">
+                    <strong>Current status</strong>
+                    <span>Not hosted yet due to insufficient curated data</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-barcode-slide">
+          <div class="barcode-slide-layout">
+            <div class="barcode-header">
+              <p class="problem-kicker">Product Data Retrieval</p>
+              <h2>Barcode Lookup Through Open Food Facts</h2>
+              <p>
+                A barcode becomes a product-data request: LabelWise sends the code to Open Food Facts and receives
+                available label information through a free open API.
+              </p>
+            </div>
+
+            <div class="barcode-open-flow" aria-label="Barcode lookup through Open Food Facts">
+              <article class="barcode-scan-stage">
+                <div class="barcode-scan-window" aria-hidden="true">
+                  <span class="barcode-corner barcode-corner-tl"></span>
+                  <span class="barcode-corner barcode-corner-tr"></span>
+                  <span class="barcode-corner barcode-corner-bl"></span>
+                  <span class="barcode-corner barcode-corner-br"></span>
+                  <span class="barcode-beam"></span>
+                  <div class="barcode-symbol">
+                    <span style="--w: 6"></span>
+                    <span style="--w: 2"></span>
+                    <span style="--w: 8"></span>
+                    <span style="--w: 3"></span>
+                    <span style="--w: 5"></span>
+                    <span style="--w: 9"></span>
+                    <span style="--w: 2"></span>
+                    <span style="--w: 7"></span>
+                    <span style="--w: 4"></span>
+                    <span style="--w: 10"></span>
+                    <span style="--w: 3"></span>
+                    <span style="--w: 6"></span>
+                  </div>
+                  <div class="barcode-digits">6430050001287</div>
+                </div>
+                <div class="barcode-scan-copy">
+                  <span class="barcode-mini-mark">|||</span>
+                  <h3>Barcode scanned</h3>
+                  <p>Fast input for packaged food during shopping.</p>
+                </div>
+              </article>
+
+              <div class="barcode-request-path fragment" data-fragment-index="1" aria-hidden="true">
+                <span>GET /api/v2/product/{barcode}</span>
+              </div>
+
+              <article class="openfood-hub fragment" data-fragment-index="1">
+                <div class="openfood-copy">
+                  <img class="openfood-logo-mark" src="images/openfoodlogo.png" alt="Open Food Facts logo" />
+                  <h3>Open Food Facts</h3>
+                  <p>
+                    A free, open, collaborative, non-profit food product database, often described as a
+                    Wikipedia-like database for food products.
+                  </p>
+                </div>
+                <figure class="openfood-community-photo">
+                  <img src="images/openfood.jpg" alt="Open Food Facts contributor community" />
+                  <figcaption>Community-powered open food data · OFF blog, CC BY-SA 3.0</figcaption>
+                </figure>
+                <div class="openfood-stats" aria-label="Open Food Facts public project scale">
+                  <strong>25k+ contributors</strong>
+                  <strong>4M products</strong>
+                  <strong>150 countries</strong>
+                </div>
+              </article>
+
+              <div class="barcode-response-path fragment" data-fragment-index="2" aria-hidden="true">
+                <span>JSON product record</span>
+              </div>
+
+              <article class="api-response-card fragment" data-fragment-index="2">
+                <span class="api-badge">{ }</span>
+                <h3>Free API response</h3>
+                <div class="api-code">
+                  <code>{</code>
+                  <code>  "product_name": "...",</code>
+                  <code>  "ingredients_text": "...",</code>
+                  <code>  "allergens_tags": [...],</code>
+                  <code>  "nutriments": {...}</code>
+                  <code>}</code>
+                </div>
+                <p>
+                  Returns ingredients, allergens, nutrition values, product category, labels, and Nutri-Score / NOVA
+                  when available.
+                </p>
+              </article>
+            </div>
+
+            <div class="barcode-coverage-note fragment" data-fragment-index="3">
+              Open Food Facts covers many packaged foods, but not every barcode has a complete record. That is where OCR fallback comes in.
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-ocr-slide">
+          <div class="ocr-slide-layout">
+            <div class="ocr-header">
+              <p class="problem-kicker">Product Data Fallback</p>
+              <h2>OCR Fallback Starts with a Valid Label Image</h2>
+              <p>
+                When barcode data are missing or incomplete, LabelWise asks the user to capture or upload a clear food
+                package or ingredient-label image.
+              </p>
+            </div>
+
+            <div class="ocr-content">
+              <figure class="ocr-phone-card">
+                <div class="ocr-phone-shell">
+                  <img src="images/screenshot/capture_img.jpg" alt="LabelWise product photo capture screen" />
+                </div>
+                <figcaption>Fallback photo capture after weak barcode data</figcaption>
+              </figure>
+
+              <div class="ocr-flow-panel" aria-label="Image intake and validation flow">
+                <div class="ocr-flow-main">
+                  <article class="ocr-flow-step ocr-flow-start fragment" data-fragment-index="1">
+                    <span>!</span>
+                    <h3>Barcode weak</h3>
+                    <p>Missing or incomplete product data.</p>
+                  </article>
+
+                  <div class="ocr-flow-arrow fragment" data-fragment-index="2" aria-hidden="true"></div>
+
+                  <article class="ocr-flow-step ocr-input-step fragment" data-fragment-index="2">
+                    <span>+</span>
+                    <h3>Choose image input</h3>
+                    <div class="ocr-input-options">
+                      <strong>Camera</strong>
+                      <strong>Gallery</strong>
+                    </div>
+                  </article>
+
+                  <div class="ocr-flow-arrow fragment" data-fragment-index="3" aria-hidden="true"></div>
+
+                  <article class="ocr-flow-step ocr-check-step fragment" data-fragment-index="3">
+                    <span>?</span>
+                    <h3>Valid food label?</h3>
+                    <p>Rejects unrelated or non-food images.</p>
+                  </article>
+
+                  <div class="ocr-flow-arrow fragment" data-fragment-index="4" aria-hidden="true"></div>
+
+                  <article class="ocr-flow-step ocr-check-step fragment" data-fragment-index="4">
+                    <span>✓</span>
+                    <h3>Readable?</h3>
+                    <p>Clear, relevant, not blurry.</p>
+                  </article>
+                </div>
+
+                <div class="ocr-retry-row fragment" data-fragment-index="5">
+                  <span></span>
+                  <span></span>
+                  <span>Not a food label</span>
+                  <span>Blurry or unreadable</span>
+                  <strong>Retake or upload again</strong>
+                </div>
+
+                <article class="ocr-extract-panel fragment" data-fragment-index="6">
+                  <h3>Valid image enters extraction</h3>
+                  <div class="ocr-extract-grid">
+                    <span>Ingredients</span>
+                    <span>Allergens</span>
+                    <span>Nutrition table</span>
+                    <span>Additives</span>
+                    <span>Country / origin</span>
+                    <span>Labels / NOVA when available</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-preference-slide">
+          <div class="preference-slide-layout">
+            <div class="preference-header">
+              <p class="problem-kicker">Personalization Layer</p>
+              <h2>Survey-Informed Preference Categories</h2>
+              <p>
+                LabelWise structures dietary preferences into five user-selected categories so personal dietary context
+                can be captured clearly, consistently, and cautiously.
+              </p>
+            </div>
+
+            <div class="preference-content">
+              <figure class="preference-phone-stack">
+                <div class="preference-phone-detail preference-phone-detail-c" aria-hidden="true">
+                  <img src="images/screenshot/pref7.jpg" alt="" />
+                </div>
+                <div class="preference-phone-detail preference-phone-detail-a" aria-hidden="true">
+                  <img src="images/screenshot/pref5.jpg" alt="" />
+                </div>
+                <div class="preference-phone-detail preference-phone-detail-b" aria-hidden="true">
+                  <img src="images/screenshot/pref6.jpg" alt="" />
+                </div>
+                <div class="preference-phone-detail preference-phone-detail-d" aria-hidden="true">
+                  <img src="images/screenshot/pref8.jpg" alt="" />
+                </div>
+                <div class="preference-phone-main">
+                  <img src="images/screenshot/pref4.jpg" alt="LabelWise five-category preference setup screen" />
+                </div>
+                <figcaption>Five-category preference setup</figcaption>
+              </figure>
+
+              <div class="preference-taxonomy" aria-label="Preference model category taxonomy">
+                <svg class="preference-taxonomy-lines" viewBox="0 0 600 320" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M300 160 L150 58"></path>
+                  <path d="M300 160 L450 58"></path>
+                  <path d="M300 160 L100 262"></path>
+                  <path d="M300 160 L300 262"></path>
+                  <path d="M300 160 L500 262"></path>
+                </svg>
+                <div class="preference-center">
+                  <span>Preference Model</span>
+                </div>
+                <article class="preference-card preference-card-religious">
+                  <h3>Religious & Cultural</h3>
+                  <strong>Pattern + strictness</strong>
+                  <p>Muslim, Hindu, Kosher, Jain</p>
+                </article>
+                <article class="preference-card preference-card-ethical">
+                  <h3>Ethical & Personal</h3>
+                  <strong>Multi-select values</strong>
+                  <p>Vegan, vegetarian, eco-friendly</p>
+                </article>
+                <article class="preference-card preference-card-allergy">
+                  <h3>Allergies & Intolerances</h3>
+                  <strong>Common + custom</strong>
+                  <p>Dairy, gluten, peanuts, custom</p>
+                </article>
+                <article class="preference-card preference-card-medical">
+                  <h3>Medical Dietary Needs</h3>
+                  <strong>Category → condition</strong>
+                  <p>Cautious condition-aware checks</p>
+                </article>
+                <div class="preference-medical-branch" aria-label="Medical preference category to condition example">
+                  <span><strong>Category</strong><em>Blood sugar</em></span>
+                  <i aria-hidden="true"></i>
+                  <span><strong>Condition</strong><em>Diabetes</em></span>
+                </div>
+                <article class="preference-card preference-card-lifestyle">
+                  <h3>Lifestyle & Fitness</h3>
+                  <strong>Goals + awareness</strong>
+                  <p>Keto, high-protein, balanced macros</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-hybrid-slide">
+          <div class="hybrid-slide-layout">
+            <div class="hybrid-header">
+              <p class="problem-kicker">Hybrid Analysis Engine</p>
+              <h2>Rules First, AI for Ambiguity and Explanation</h2>
+              <p>
+                LabelWise uses a hybrid engine so clear dietary conflicts are handled predictably, while ambiguous
+                ingredients can still be interpreted and explained.
+              </p>
+            </div>
+
+            <figure class="hybrid-diagram">
+              <img src="images/hybrid_analysis.png" alt="Hybrid analysis engine diagram showing product data, user preferences, rule-based filtering, GPT-4.1-supported interpretation, and personalized results" />
+            </figure>
+
+            <p class="hybrid-takeaway">
+              The hybrid engine avoids two weak extremes: rule-only rigidity and AI-only overclaiming.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-rule-slide">
+          <div class="rule-slide-layout">
+            <div class="rule-header">
+              <p class="problem-kicker">Rule-Based Layer</p>
+              <h2>Known Conflicts Are Checked First</h2>
+              <p>LabelWise uses predefined restriction dictionaries to detect clear dietary conflicts before deeper interpretation is needed.</p>
+            </div>
+
+            <div class="rule-evidence-grid">
+              <figure class="rule-code-shot fragment">
+                <div class="rule-code-crop">
+                  <img src="images/screenshot/rules_2.png" alt="contains_pork restriction dictionary definition" />
+                </div>
+                <figcaption>Example restriction definition: <strong>contains_pork</strong></figcaption>
+              </figure>
+
+              <div class="rule-dictionary fragment">
+                <div class="rule-dict-group">
+                  <span class="rule-dict-label">Common names</span>
+                  <div class="rule-dict-chips">
+                    <span>pork</span>
+                    <span>ham</span>
+                    <span>bacon</span>
+                  </div>
+                </div>
+                <div class="rule-dict-group">
+                  <span class="rule-dict-label">Processed forms</span>
+                  <div class="rule-dict-chips">
+                    <span>lard</span>
+                    <span>pork fat</span>
+                    <span>salami</span>
+                    <span>chorizo</span>
+                  </div>
+                </div>
+                <div class="rule-dict-group">
+                  <span class="rule-dict-label">Technical or origin</span>
+                  <div class="rule-dict-chips">
+                    <span>porcine</span>
+                    <span>pork gelatin</span>
+                  </div>
+                </div>
+                <div class="rule-dict-group">
+                  <span class="rule-dict-label">Multilingual variants</span>
+                  <div class="rule-dict-chips">
+                    <span>jamon</span>
+                    <span>jamón</span>
+                    <span>porc</span>
+                    <span>porco</span>
+                  </div>
+                </div>
+                <p class="rule-dict-note">This is more than one keyword. It is a mapped restriction dictionary.</p>
+              </div>
+
+              <div class="rule-matching-flow fragment">
+                <div class="rule-flow-step">
+                  <span class="rule-flow-label">Ingredient text</span>
+                  <strong>"contains porcine gelatin"</strong>
+                </div>
+                <div class="rule-flow-arrow" aria-hidden="true">↓</div>
+                <div class="rule-flow-step">
+                  <span class="rule-flow-label">Normalize and compare</span>
+                  <strong>against contains_pork</strong>
+                </div>
+                <div class="rule-flow-arrow" aria-hidden="true">↓</div>
+                <div class="rule-flow-step rule-flow-highlight">
+                  <span class="rule-flow-label">Matched term</span>
+                  <strong>porcine</strong>
+                </div>
+                <div class="rule-flow-arrow" aria-hidden="true">↓</div>
+                <div class="rule-flow-step rule-flow-flag">
+                  <span class="rule-flow-label">Conflict flag</span>
+                  <strong>Pork-related ingredient detected</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="rule-why-strip fragment">
+              <div>
+                <span>Consistent</span>
+                <p>Same input gives same match</p>
+              </div>
+              <div>
+                <span>Fast</span>
+                <p>Clear conflicts detected immediately</p>
+              </div>
+              <div>
+                <span>Traceable</span>
+                <p>Matched term shown in explanation</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-ai-slide">
+          <div class="ai-slide-layout">
+            <div class="ai-header">
+              <p class="problem-kicker">AI Interpretation Layer</p>
+              <h2>Structured Interpretation, Not Free-Form Chat</h2>
+            </div>
+
+            <div class="ai-pipeline-visual fragment">
+              <span class="ai-pipeline-label ai-pipeline-label-center">GPT-4.1 acts as the current teacher and interpretation model inside a controlled workflow.</span>
+              <span class="ai-pipeline-label ai-pipeline-label-left">Controlled input</span>
+              <figure class="ai-diagram">
+                <img src="images/diagram_ai_layer.png" alt="AI interpretation layer diagram showing inputs flowing into GPT-4.1 with Semantic and Reasoning components, producing structured outputs" />
+              </figure>
+              <span class="ai-pipeline-label ai-pipeline-label-right">Structured output</span>
+            </div>
+
+            <div class="ai-pipeline-strip fragment">
+              <div class="ai-strip-column">
+                <h4>Controlled input</h4>
+                <ul>
+                  <li>Product context</li>
+                  <li>Selected preferences</li>
+                  <li>Rule findings</li>
+                  <li>Uncertainty conditions</li>
+                </ul>
+              </div>
+
+              <div class="ai-strip-column ai-strip-column-roles">
+                <h4>Two interpretation roles</h4>
+                <div class="ai-strip-role">
+                  <strong>Semantic</strong>
+                  <span>unfamiliar terms, compound ingredients, additives, unclear origins</span>
+                </div>
+                <div class="ai-strip-role">
+                  <strong>Reasoning</strong>
+                  <span>product context, preference relevance, evidence strength, uncertainty</span>
+                </div>
+              </div>
+
+              <div class="ai-strip-column">
+                <h4>Structured output</h4>
+                <ul>
+                  <li>Status</li>
+                  <li>Explanation</li>
+                  <li>Concerns</li>
+                  <li>Confidence</li>
+                  <li>Uncertainty</li>
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-confidence-slide">
+          <div class="confidence-slide-layout">
+            <div class="confidence-header">
+              <p class="problem-kicker">Confidence Score</p>
+              <h2>Confidence Is a Support Signal, Not a Probability</h2>
+            </div>
+
+            <div class="confidence-content">
+              <figure class="confidence-result-preview fragment" data-fragment-index="1">
+                <div class="confidence-phone-crop">
+                  <img src="images/screenshot/result.jpg" alt="LabelWise result screen showing unsafe result and confidence 86%" />
+                </div>
+                <figcaption>Confidence appears with the result, not alone</figcaption>
+              </figure>
+
+              <article class="confidence-output-card fragment" data-fragment-index="2">
+                <span>Structured teacher output</span>
+                <pre><code>{
+  "status": "unsafe",
+  "concerns": ["ethical conflict"],
+  "explanation": "...",
+  "confidence": 86,
+  "uncertainty": "..."
+}</code></pre>
+                <p class="confidence-output-note">
+                  The confidence score is generated inside the same structured teacher output as the result,
+                  explanation, detected concerns, and uncertainty notes.
+                </p>
+                <p class="confidence-output-caution">Not a calibrated probability or certified safety score.</p>
+              </article>
+
+              <article class="confidence-scale-card fragment" data-fragment-index="3">
+                <h3>Evidence strength</h3>
+                <div class="confidence-scale">
+                  <div class="confidence-scale-level confidence-scale-high">
+                    <strong>Higher confidence</strong>
+                    <ul>
+                      <li>Complete product data</li>
+                      <li>Clear detected conflict</li>
+                      <li>Consistent explanation</li>
+                    </ul>
+                  </div>
+                  <div class="confidence-scale-line" aria-hidden="true"></div>
+                  <div class="confidence-scale-level confidence-scale-low">
+                    <strong>Lower confidence</strong>
+                    <ul>
+                      <li>Missing product data</li>
+                      <li>Weak OCR text</li>
+                      <li>Unclear ingredient origin</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p class="confidence-takeaway fragment" data-fragment-index="4">
+              Confidence supports interpretation, but it does not prove dietary safety.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-result-output-slide">
+          <div class="result-output-layout">
+            <div class="result-output-header">
+              <p class="problem-kicker">Result Output</p>
+              <h2>Judgement, Explanation, and Preference-Level Feedback</h2>
+            </div>
+
+            <div class="result-output-anatomy">
+              <figure class="result-phone-panel">
+                <div class="result-phone-crop">
+                  <img src="images/screenshot/result.jpg" alt="Top area of LabelWise result page" />
+                </div>
+              </figure>
+
+              <figure class="result-phone-panel">
+                <div class="result-phone-crop">
+                  <img src="images/screenshot/result_2.jpg" alt="Lower LabelWise result page with preference results and concerns" />
+                </div>
+              </figure>
+
+              <figure class="result-phone-panel">
+                <div class="result-phone-crop">
+                  <img src="images/screenshot/Screenshot_20260515-111040.jpg" alt="LabelWise medical preference detail page showing warning, confidence, and salt concern" />
+                </div>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        controls: false,
+        progress: true,
+        slideNumber: false,
+        transition: "fade"
+      });
+
+      const pandaButton = document.querySelector(".labelwise-logo-button");
+      let pandaAnimationTimer;
+
+      pandaButton?.addEventListener("click", () => {
+        pandaButton.classList.remove("is-scanning");
+        void pandaButton.offsetWidth;
+        pandaButton.classList.add("is-scanning");
+        clearTimeout(pandaAnimationTimer);
+        pandaAnimationTimer = setTimeout(() => {
+          pandaButton.classList.remove("is-scanning");
+        }, 5800);
+      });
+
+      const refreshDifficultyAnimation = () => {
+        document
+          .querySelectorAll(".labelwise-difficulties-slide, .labelwise-workarounds-slide, .labelwise-dietary-slide, .labelwise-usefulness-slide")
+          .forEach((slide) => {
+          slide.classList.remove("is-active");
+        });
+
+        const currentSlide = Reveal.getCurrentSlide();
+        if (
+          currentSlide?.classList.contains("labelwise-difficulties-slide") ||
+          currentSlide?.classList.contains("labelwise-workarounds-slide") ||
+          currentSlide?.classList.contains("labelwise-dietary-slide") ||
+          currentSlide?.classList.contains("labelwise-usefulness-slide")
+        ) {
+          void currentSlide.offsetWidth;
+          currentSlide.classList.add("is-active");
+        }
+      };
+
+      const refreshSlideTheme = () => {
+        const currentSlide = Reveal.getCurrentSlide();
+        const isIntroSlide = Boolean(
+          currentSlide?.classList.contains("labelwise-intro-slide")
+        );
+        const isWorkflowSlide = Boolean(
+          currentSlide?.classList.contains("labelwise-workflow-slide")
+        );
+        const isArchitectureSlide = Boolean(
+          currentSlide?.classList.contains("labelwise-architecture-slide")
+        );
+        document
+          .querySelector(".reveal")
+          ?.classList.toggle("is-labelwise-intro-active", isIntroSlide);
+        document
+          .querySelector(".reveal")
+          ?.classList.toggle("is-labelwise-workflow-active", isWorkflowSlide);
+        document
+          .querySelector(".reveal")
+          ?.classList.toggle("is-labelwise-architecture-active", isArchitectureSlide);
+        document.body.classList.toggle("is-labelwise-intro-active", isIntroSlide);
+        document.body.classList.toggle("is-labelwise-workflow-active", isWorkflowSlide);
+        document.body.classList.toggle("is-labelwise-architecture-active", isArchitectureSlide);
+      };
+
+      const refreshSlideState = () => {
+        refreshDifficultyAnimation();
+        refreshSlideTheme();
+      };
+
+      Reveal.on("ready", refreshSlideState);
+      Reveal.on("slidechanged", refreshSlideState);
+    </script>
+  </body>
+</html>

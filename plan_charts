@@ -1,0 +1,54 @@
+1. Opening and thesis framing
+
+Title
+One-line problem
+Why food labels are hard
+Why this matters in Finland
+Thesis aim
+Research questions
+
+2. Problem evidence and user study *
+7. Survey overview, 109 responses
+8. Main label difficulties
+9. Current workarounds
+10. Dietary needs and ingredient concerns
+11. App usefulness and privacy findings
+12. Requirements derived from survey
+
+3. LabelWise solution*
+13. What LabelWise is
+14. What LabelWise is not
+15. Main workflow
+16. System architecture
+17. Barcode lookup and Open Food Facts
+18. OCR fallback
+19. Preference model
+20. Hybrid analysis engine
+21. Rule-based layer
+22. GPT-4.1 interpretation layer
+23. Confidence score explanation
+24. Result generation
+
+4. Implementation
+25. Mobile app screens
+26. Preference setup screens
+27. Scan flow
+28. Result page
+29. Accessibility features
+30. Backend/admin dashboard
+31. Data curation workflow
+32. Future Qwen2.5 + LoRA pathway
+
+5. Evaluation and discussion
+33. Evaluation approach
+34. Functional evaluation
+35. User testing feedback
+36. Backend/model readiness
+37. Limitations
+38. Research question answers
+
+6. Conclusion
+39. Main contributions
+40. Future work
+41. Final reflection
+42. Demo transition slide
