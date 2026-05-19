@@ -10170,8 +10170,12 @@ body.has-dashboard-lightbox {
 }
 
 .reveal .labelwise-readiness-slide .fragment {
-  opacity: 0;
+  opacity: 1;
   transition: all 540ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal .labelwise-readiness-slide .fragment:not(.visible) {
+  opacity: 1;
 }
 
 .reveal .labelwise-readiness-slide .fragment.visible {
