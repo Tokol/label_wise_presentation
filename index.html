@@ -2038,14 +2038,14 @@
             </div>
 
             <div class="user-testing-board">
-              <section class="user-testing-list user-testing-validated" aria-label="Validated by testing">
+              <div class="user-testing-list user-testing-validated" aria-label="Validated by testing">
                 <p>Confirmed value</p>
                 <ul>
                   <li class="user-testing-tick fragment" data-fragment-index="0"><strong>Concept</strong><span>Users understood scan-to-result support.</span></li>
                   <li class="user-testing-tick fragment" data-fragment-index="1"><strong>Workflow</strong><span>Less switching between translation, search, and AI tools.</span></li>
                   <li class="user-testing-tick fragment" data-fragment-index="2"><strong>Result</strong><span>Explanation mattered, not only the final label.</span></li>
                 </ul>
-              </section>
+              </div>
 
               <div class="user-testing-bridge" aria-hidden="true">
                 <span>real-device testing</span>
@@ -2053,7 +2053,7 @@
                 <span>prototype refinements</span>
               </div>
 
-              <section class="user-testing-list user-testing-refined" aria-label="Issues and actions">
+              <div class="user-testing-list user-testing-refined" aria-label="Issues and actions">
                 <p>Refinements identified</p>
                 <ul>
                   <li class="user-testing-tick fragment" data-fragment-index="3"><strong>Repeated scanning</strong><span>Prevent repeat barcode scans in result flow.</span></li>
@@ -2061,48 +2061,267 @@
                   <li class="user-testing-tick fragment" data-fragment-index="5"><strong>Data quality</strong><span>Incomplete records confirmed OCR fallback need.</span></li>
                   <li class="user-testing-tick fragment" data-fragment-index="6"><strong>Improved UI flow</strong><span>Refined layout and interactions made the app feel more polished.</span></li>
                 </ul>
-              </section>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="labelwise-image-slide labelwise-readiness-slide">
-          <div class="readiness-layout">
-            <div class="readiness-header">
+          <div class="user-testing-layout">
+            <div class="user-testing-header">
               <p class="problem-kicker">Backend and Model Readiness</p>
               <h2>Pipeline Ready, Student Reliability Not Proven</h2>
             </div>
 
-            <div class="readiness-boundary fragment" data-fragment-index="0">
-              <strong>Pipeline ready</strong>
-              <span>≠</span>
-              <strong>production-ready student model</strong>
+            <div class="user-testing-board">
+              <div class="user-testing-list user-testing-validated" aria-label="Ready now">
+                <p>Ready now</p>
+                <ul>
+                  <li class="user-testing-tick fragment" data-fragment-index="1"><strong>Teacher records</strong><span>Structured training data with dietary profiles and preference mappings.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="2"><strong>Dashboard review</strong><span>Visual curation interface for inspecting and correcting records.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="3"><strong>Export + training</strong><span>Curated batches exported for Colab model experiments.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="4"><strong>Model registry</strong><span>Qwen2.5 + LoRA artifacts tracked in Hugging Face.</span></li>
+                </ul>
+              </div>
+
+              <div class="user-testing-bridge" aria-hidden="true">
+                <span>pipeline ready</span>
+                <b>≠</b>
+                <span>student model</span>
+              </div>
+
+              <div class="user-testing-list user-testing-refined" aria-label="Not ready yet">
+                <p>Not ready yet</p>
+                <ul>
+                  <li class="user-testing-tick fragment" data-fragment-index="5"><strong>Export readiness</strong><span>Batch format still evolving for automated training.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="6"><strong>Student quality</strong><span>Not enough curated data for reliable predictions.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="7"><strong>Hosted inference</strong><span>No production deployment or API stability yet.</span></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="readiness-columns">
-              <section class="readiness-column readiness-ready" aria-label="Ready now">
-                <h3>Ready now</h3>
-                <ul>
-                  <li class="fragment" data-fragment-index="1">Teacher records</li>
-                  <li class="fragment" data-fragment-index="2">Dashboard review</li>
-                  <li class="fragment" data-fragment-index="3">Export + training</li>
-                  <li class="fragment" data-fragment-index="4">Model registry</li>
-                </ul>
-              </section>
+          </div>
+        </section>
 
-              <section class="readiness-column readiness-limited" aria-label="Not ready yet">
-                <h3>Not ready yet</h3>
-                <ul>
-                  <li class="fragment" data-fragment-index="5">Export readiness</li>
-                  <li class="fragment" data-fragment-index="6">Student quality</li>
-                  <li class="fragment" data-fragment-index="7">Hosted inference</li>
-                </ul>
-              </section>
+        <section class="labelwise-image-slide labelwise-limitations-slide">
+          <div class="limitations-layout">
+            <div class="user-testing-header">
+              <p class="problem-kicker">Limitations</p>
+              <h2>What Constrains LabelWise Reliability</h2>
             </div>
 
-            <p class="readiness-takeaway fragment" data-fragment-index="8">
-              This supports future curation and experimentation, not a reliable deployed student model.
+            <div class="limitations-bars">
+              <div class="limitation-bar fragment" data-fragment-index="0">
+                <span class="limitation-num">01</span>
+                <div class="limitation-body">
+                  <h4>Data limitations</h4>
+                  <p>Product records may be incomplete, outdated, or inconsistent. This affects barcode-based analysis.</p>
+                </div>
+              </div>
+
+              <div class="limitation-bar fragment" data-fragment-index="1">
+                <span class="limitation-num">02</span>
+                <div class="limitation-body">
+                  <h4>OCR limitations</h4>
+                  <p>Image quality affects extraction. Lighting, focus, packaging shape, small text, and layout can reduce accuracy.</p>
+                </div>
+              </div>
+
+              <div class="limitation-bar fragment" data-fragment-index="2">
+                <span class="limitation-num">03</span>
+                <div class="limitation-body">
+                  <h4>Rule limitations</h4>
+                  <p>Dictionaries cannot cover every synonym, language variant, spelling variation, or hidden ingredient source.</p>
+                </div>
+              </div>
+
+              <div class="limitation-bar fragment" data-fragment-index="3">
+                <span class="limitation-num">04</span>
+                <div class="limitation-body">
+                  <h4>AI and confidence limitations</h4>
+                  <p>GPT-4.1 helps with interpretation, but its internal reasoning is not fully inspectable. Confidence is useful as a support signal, but not as calibrated probability.</p>
+                </div>
+              </div>
+
+              <div class="limitation-bar fragment" data-fragment-index="4">
+                <span class="limitation-num">05</span>
+                <div class="limitation-body">
+                  <h4>Validation limitations</h4>
+                  <p>Accessibility and student-model inference require stronger future testing. Accessibility is implemented, but not fully validated with assistive-technology users. Qwen2.5 + LoRA pipeline exists, but student-model reliability is not proven.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-conclusion-slide">
+          <div class="conclusion-layout">
+            <div class="user-testing-header">
+              <p class="problem-kicker">Conclusion and Synthesis</p>
+              <h2>What the Thesis Answers</h2>
+            </div>
+
+            <div class="conclusion-grid" aria-label="Research question answers">
+              <article class="fragment conclusion-card" data-fragment-index="0">
+                <div class="conclusion-card-inner">
+                  <div class="conclusion-card-front">
+                    <div class="conclusion-card-top"><span>RQ1</span><div class="conclusion-icon">?</div></div>
+                    <h3>Food label difficulty</h3>
+                    <p>What practical difficulties do users face when interpreting food labels in Finland?</p>
+                  </div>
+                  <div class="conclusion-card-back">
+                    <div class="conclusion-card-top"><span>RQ1</span><div class="conclusion-icon">✓</div></div>
+                    <p><strong>Users face a combined interpretation problem.</strong> Finnish/Swedish language, small text, additives, hidden animal-derived ingredients, allergens, technical terms, and tool switching make label decisions difficult.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="fragment conclusion-card" data-fragment-index="1">
+                <div class="conclusion-card-inner">
+                  <div class="conclusion-card-front">
+                    <div class="conclusion-card-top"><span>RQ2</span><div class="conclusion-icon">?</div></div>
+                    <h3>Personalized mobile support</h3>
+                    <p>How can a mobile application support personalized food label interpretation using dietary preferences defined by the user?</p>
+                  </div>
+                  <div class="conclusion-card-back">
+                    <div class="conclusion-card-top"><span>RQ2</span><div class="conclusion-icon">✓</div></div>
+                    <p><strong>Personalized support requires explicit preferences.</strong> LabelWise supports this by connecting barcode/image input with user-defined dietary categories and returning suitability feedback linked to those selections.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="fragment conclusion-card" data-fragment-index="2">
+                <div class="conclusion-card-inner">
+                  <div class="conclusion-card-front">
+                    <div class="conclusion-card-top"><span>RQ3</span><div class="conclusion-icon">?</div></div>
+                    <h3>Hybrid analysis</h3>
+                    <p>How can filtering based on rules and interpretation supported by AI be combined to provide explainable dietary decision support?</p>
+                  </div>
+                  <div class="conclusion-card-back">
+                    <div class="conclusion-card-top"><span>RQ3</span><div class="conclusion-icon">✓</div></div>
+                    <p><strong>Rules and AI have different jobs.</strong> Rules detect clear known conflicts first; GPT-4.1 handles ambiguous ingredient meaning, explanation, confidence signalling, and uncertainty notes.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="fragment conclusion-card" data-fragment-index="3">
+                <div class="conclusion-card-inner">
+                  <div class="conclusion-card-front">
+                    <div class="conclusion-card-top"><span>RQ4</span><div class="conclusion-icon">?</div></div>
+                    <h3>Reliability limits</h3>
+                    <p>What limitations affect the reliability of the LabelWise prototype and its future lightweight model pathway?</p>
+                  </div>
+                  <div class="conclusion-card-back">
+                    <div class="conclusion-card-top"><span>RQ4</span><div class="conclusion-icon">✓</div></div>
+                    <p><strong>Reliability depends on evidence maturity.</strong> The prototype is limited by product data quality, OCR accuracy, rule dictionary coverage, AI uncertainty, confidence interpretation, accessibility testing, and immature student-model data.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-contribution-slide">
+          <div class="contribution-layout">
+            <div class="user-testing-header">
+              <p class="problem-kicker">Thesis Contribution</p>
+              <h2>Main Contributions of LabelWise</h2>
+            </div>
+
+            <div class="contribution-grid" aria-label="Main contributions">
+              <article class="fragment contribution-card" data-fragment-index="0">
+                <div class="contribution-badge">01</div>
+                <h3>User-grounded problem definition</h3>
+                <p>A survey with 109 participants showed that food label interpretation is a real practical difficulty, not only a technical assumption.</p>
+              </article>
+              <article class="fragment contribution-card" data-fragment-index="0">
+                <div class="contribution-badge">02</div>
+                <h3>Preference-based decision support</h3>
+                <p>LabelWise converts user-defined dietary needs into structured categories for personalized food label interpretation.</p>
+              </article>
+              <article class="fragment contribution-card" data-fragment-index="1">
+                <div class="contribution-badge">03</div>
+                <h3>Hybrid analysis engine</h3>
+                <p>Known conflicts are checked through rule-based filtering, while GPT-4.1 supports ambiguity, explanation, confidence, and uncertainty.</p>
+              </article>
+              <article class="fragment contribution-card" data-fragment-index="1">
+                <div class="contribution-badge">04</div>
+                <h3>Explainable result structure</h3>
+                <p>The result page shows status, reason, detected concern, confidence, preference-level feedback, and uncertainty instead of only a final label.</p>
+              </article>
+              <article class="fragment contribution-card" data-fragment-index="2">
+                <div class="contribution-badge">05</div>
+                <h3>Accessibility and privacy-aware workflow</h3>
+                <p>Voice guidance, semantic labels, no mandatory login, local-first preferences, and minimal data handling make the workflow more inclusive and responsible.</p>
+              </article>
+              <article class="fragment contribution-card" data-fragment-index="2">
+                <div class="contribution-badge">06</div>
+                <h3>Future model curation pathway</h3>
+                <p>The backend supports teacher record review, curated export batches, Colab training handoff, Hugging Face artifacts, and Qwen2.5 + LoRA experimentation.</p>
+              </article>
+            </div>
+
+            <p class="contribution-tstack fragment" data-fragment-index="3">
+              <strong>Implemented with:</strong> Flutter, Open Food Facts, rule dictionaries, GPT-4.1, FastAPI/backend dashboard, Colab, Qwen2.5, LoRA, and Hugging Face artifact storage.
             </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-future-slide">
+          <div class="future-layout">
+            <div class="user-testing-header">
+              <p class="problem-kicker">Future Work Roadmap</p>
+            </div>
+
+            <figure class="future-hero">
+              <img src="images/future.png" alt="LabelWise future work roadmap showing five stages: real-world usage, curation and validation, expert and accessibility testing, rule and product knowledge, and model and infrastructure maturity" />
+            </figure>
+
+            <div class="future-list" aria-label="Future work roadmap details">
+              <div class="future-list-row">
+                <div class="future-item">
+                  <span class="future-num">01</span>
+                  <div class="future-item-body">
+                    <h4>Real-world usage</h4>
+                    <p>Collect more scans, products, dietary profiles, preference combinations, and teacher records from real shopping contexts.</p>
+                  </div>
+                </div>
+                <div class="future-item">
+                  <span class="future-num">02</span>
+                  <div class="future-item-body">
+                    <h4>Curation and validation</h4>
+                    <p>Review, correct, exclude, approve, balance, and version records before using them for evaluation or training.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="future-list-row">
+                <div class="future-item">
+                  <span class="future-num">03</span>
+                  <div class="future-item-body">
+                    <h4>Expert and accessibility testing</h4>
+                    <p>Involve dietitians, food safety professionals, medical advisors, certification knowledge, and assistive-technology users.</p>
+                  </div>
+                </div>
+                <div class="future-item">
+                  <span class="future-num">04</span>
+                  <div class="future-item-body">
+                    <h4>Rule and product knowledge</h4>
+                    <p>Expand rule dictionaries, multilingual ingredient terms, allergen synonyms, additive mappings, hidden animal-derived terms, and product-category knowledge.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="future-list-row future-list-row-center">
+                <div class="future-item">
+                  <span class="future-num">05</span>
+                  <div class="future-item-body">
+                    <h4>Model and infrastructure maturity</h4>
+                    <p>Move beyond Colab proof toward validated Qwen2.5 + LoRA experiments, stable infrastructure, and hosted inference only after enough curated data.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -2304,6 +2523,12 @@
       Reveal.on("slidechanged", closeDashboardLightbox);
       Reveal.on("ready", refreshSlideState);
       Reveal.on("slidechanged", refreshSlideState);
+
+      document.querySelectorAll(".conclusion-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("flipped");
+        });
+      });
     </script>
   </body>
 </html>
