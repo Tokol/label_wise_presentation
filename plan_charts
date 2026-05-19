@@ -35,20 +35,23 @@ Research questions
 27. Scan flow
 28. Result page
 29. Accessibility features
-30. Backend/admin dashboard
-31. Data curation workflow
-32. Future Qwen2.5 + LoRA pathway
+30. Privacy and data handling
+31. Responsible knowledge distillation
+32. Backend review layer
+33. Data curation workflow
+34. Distillation process
+35. Future Qwen2.5 + LoRA pathway
 
 5. Evaluation and discussion
-33. Evaluation approach
-34. Functional evaluation
-35. User testing feedback
-36. Backend/model readiness
-37. Limitations
-38. Research question answers
+36. Evaluation approach
+37. Functional evaluation
+38. User testing feedback
+39. Backend/model readiness
+40. Limitations
+41. Research question answers
 
 6. Conclusion
-39. Main contributions
-40. Future work
-41. Final reflection
-42. Demo transition slide
+42. Main contributions
+43. Future work
+44. Final reflection
+45. Demo transition slide

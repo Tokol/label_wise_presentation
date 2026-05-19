@@ -1278,17 +1278,11 @@
 
             <div class="preference-content">
               <figure class="preference-phone-stack">
-                <div class="preference-phone-detail preference-phone-detail-c" aria-hidden="true">
-                  <img src="images/screenshot/pref7.jpg" alt="" />
-                </div>
                 <div class="preference-phone-detail preference-phone-detail-a" aria-hidden="true">
                   <img src="images/screenshot/pref5.jpg" alt="" />
                 </div>
                 <div class="preference-phone-detail preference-phone-detail-b" aria-hidden="true">
                   <img src="images/screenshot/pref6.jpg" alt="" />
-                </div>
-                <div class="preference-phone-detail preference-phone-detail-d" aria-hidden="true">
-                  <img src="images/screenshot/pref8.jpg" alt="" />
                 </div>
                 <div class="preference-phone-main">
                   <img src="images/screenshot/pref4.jpg" alt="LabelWise five-category preference setup screen" />
@@ -1581,26 +1575,553 @@
 
             <div class="result-output-anatomy">
               <figure class="result-phone-panel">
-                <div class="result-phone-crop">
+                <div class="result-phone-crop zoomable-phone" tabindex="0" role="button" aria-label="Zoom top area of LabelWise result page">
                   <img src="images/screenshot/result.jpg" alt="Top area of LabelWise result page" />
                 </div>
               </figure>
 
               <figure class="result-phone-panel">
-                <div class="result-phone-crop">
+                <div class="result-phone-crop zoomable-phone" tabindex="0" role="button" aria-label="Zoom lower LabelWise result page">
                   <img src="images/screenshot/result_2.jpg" alt="Lower LabelWise result page with preference results and concerns" />
                 </div>
               </figure>
 
               <figure class="result-phone-panel">
-                <div class="result-phone-crop">
+                <div class="result-phone-crop zoomable-phone" tabindex="0" role="button" aria-label="Zoom LabelWise medical preference detail page">
                   <img src="images/screenshot/Screenshot_20260515-111040.jpg" alt="LabelWise medical preference detail page showing warning, confidence, and salt concern" />
                 </div>
               </figure>
             </div>
           </div>
         </section>
+
+        <section class="labelwise-image-slide mobile-prototype-slide">
+          <div class="mobile-prototype-layout">
+            <div class="mobile-prototype-header">
+              <p class="problem-kicker">Mobile Prototype</p>
+              <h2>Complete Mobile Workflow Implemented</h2>
+            </div>
+
+            <div class="prototype-gallery">
+              <figure class="prototype-screen prototype-screen-home">
+                <div class="prototype-phone-frame zoomable-phone" tabindex="0" role="button" aria-label="Zoom LabelWise home screen">
+                  <img src="images/screenshot/Screenshot_20260515-110111.jpg" alt="LabelWise home screen with scan history and insights preview" />
+                </div>
+                <figcaption>Home</figcaption>
+              </figure>
+
+              <figure class="prototype-screen prototype-screen-preferences">
+                <div class="prototype-phone-frame zoomable-phone" tabindex="0" role="button" aria-label="Zoom LabelWise preference setup screen">
+                  <img src="images/screenshot/Screenshot_20260515-105312.jpg" alt="LabelWise preference setup categories screen" />
+                </div>
+                <figcaption>Preferences</figcaption>
+              </figure>
+
+              <figure class="prototype-screen prototype-screen-scan">
+                <div class="prototype-phone-frame zoomable-phone" tabindex="0" role="button" aria-label="Zoom LabelWise barcode scanning screen">
+                  <img src="images/screenshot/barcode_scan.jpg" alt="LabelWise barcode scanning screen" />
+                </div>
+                <figcaption>Barcode scan</figcaption>
+              </figure>
+
+              <figure class="prototype-screen prototype-screen-fallback">
+                <div class="prototype-phone-frame zoomable-phone" tabindex="0" role="button" aria-label="Zoom LabelWise photo fallback screen">
+                  <img src="images/screenshot/capture_img.jpg" alt="LabelWise photo fallback screen for product label capture" />
+                </div>
+                <figcaption>Photo fallback</figcaption>
+              </figure>
+
+              <figure class="prototype-screen prototype-screen-result">
+                <div class="prototype-phone-frame zoomable-phone" tabindex="0" role="button" aria-label="Zoom LabelWise result screen">
+                  <img src="images/screenshot/result.jpg" alt="LabelWise result page with suitability judgement and confidence" />
+                </div>
+                <figcaption>Result</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-accessibility-slide">
+          <div class="accessibility-layout">
+            <div class="accessibility-copy">
+              <p class="problem-kicker">ACCESSIBILITY &amp; INCLUSION</p>
+              <h2>Accessible Scan Feedback</h2>
+              <p class="accessibility-intro">
+                The scan flow communicates status through visible, semantic, and optional device feedback.
+              </p>
+
+              <div class="accessibility-layers" aria-label="Accessibility feedback layers">
+                <article class="accessibility-layer fragment" data-fragment-index="0">
+                  <span>Visible</span>
+                  <p>Scan, processing, and result states</p>
+                </article>
+                <article class="accessibility-layer fragment" data-fragment-index="1">
+                  <span>Semantic</span>
+                  <p>Screen-reader labels for key components</p>
+                </article>
+                <article class="accessibility-layer fragment" data-fragment-index="2">
+                  <span>Device</span>
+                  <p>Audio or haptics when enabled</p>
+                </article>
+              </div>
+            </div>
+
+            <figure class="accessibility-visual">
+              <img src="images/scan.png" alt="LabelWise scan screen demonstrating accessible scanning status feedback" />
+            </figure>
+
+            <p class="accessibility-takeaway fragment" data-fragment-index="3">
+              Full assistive-technology user testing remains future work.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-privacy-slide">
+          <div class="privacy-layout">
+            <p class="problem-kicker privacy-kicker">Privacy and Data Handling</p>
+
+            <div class="privacy-header">
+              <h2>Personalization Without Unnecessary Profiling</h2>
+            </div>
+
+            <figure class="privacy-visual">
+              <img src="images/privacy.png" alt="Diagram showing LabelWise privacy flow from user device to minimal data boundary and backend review" />
+            </figure>
+
+            <div class="privacy-cards" aria-label="LabelWise privacy principles">
+              <article class="fragment" data-fragment-index="0">
+                <h3>Local-first personalization</h3>
+                <p>Preferences and scan history stay on the user device where possible.</p>
+              </article>
+              <article class="fragment" data-fragment-index="1">
+                <h3>Minimal analysis context</h3>
+                <p>Only needed product data and selected preference context are used for analysis.</p>
+              </article>
+              <article class="fragment" data-fragment-index="2">
+                <h3>Review, not profiling</h3>
+                <p>Backend records support review and curation, not personal behaviour tracking.</p>
+              </article>
+            </div>
+
+            <p class="privacy-takeaway fragment" data-fragment-index="3">
+              Privacy principle: collect less, infer less, explain more.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-distillation-slide">
+          <div class="distillation-layout">
+            <div class="distillation-header">
+              <p class="problem-kicker">Responsible Knowledge Distillation</p>
+              <h2>Distillation Requires Controlled Teacher Data</h2>
+              <p class="fragment distillation-statement" data-fragment-index="0">
+                Knowledge distillation has recently become politically sensitive because unauthorized large-scale
+                harvesting of model outputs can be treated as a &ldquo;distillation attack.&rdquo; LabelWise does not use
+                hidden output scraping. It uses controlled, reviewed, project-owned teacher records.
+              </p>
+            </div>
+
+            <figure class="distillation-visual">
+              <img src="images/distil.png" alt="Diagram comparing uncontrolled model output harvesting with the controlled LabelWise teacher-record curation pathway" />
+            </figure>
+
+            <p class="distillation-takeaway fragment" data-fragment-index="1">
+              In LabelWise, distillation is a transparent curation pipeline, not hidden model copying.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-backend-review-slide">
+          <div class="backend-review-layout">
+            <div class="backend-review-header">
+              <p class="problem-kicker">Backend Review Layer</p>
+              <h2>Teacher Records Are Reviewed Before Reuse</h2>
+              <p>
+                The dashboard turns structured teacher outputs into inspectable records for filtering, curation,
+                and future export decisions.
+              </p>
+            </div>
+
+            <figure class="backend-review-visual">
+              <img src="images/distaltion_dash.png" alt="LabelWise admin dashboard showing teacher records, status breakdown, export readiness, and curation tabs" />
+            </figure>
+
+            <div class="backend-review-chips" aria-label="Backend review dashboard callouts">
+              <article class="fragment" data-fragment-index="0">
+                <strong>Collected</strong>
+                <span>Teacher records from analysis workflow.</span>
+              </article>
+              <article class="fragment" data-fragment-index="1">
+                <strong>Status</strong>
+                <span>Safe, warning, unsafe breakdown.</span>
+              </article>
+              <article class="fragment" data-fragment-index="2">
+                <strong>Export</strong>
+                <span>Reviewed records prepare future batches.</span>
+              </article>
+              <article class="fragment" data-fragment-index="3">
+                <strong>Curation</strong>
+                <span>Training workflow stays separate from raw collection.</span>
+              </article>
+            </div>
+
+            <p class="backend-review-takeaway fragment" data-fragment-index="4">
+              Raw teacher outputs are reviewed before they become training data.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-curation-slide">
+          <div class="curation-layout">
+            <div class="curation-header">
+              <p class="problem-kicker">Data Curation Layer</p>
+              <h2>Teacher Records Are Not Automatically Training Data</h2>
+              <p>
+                LabelWise turns teacher outputs into training candidates only after inspection, approval, exclusion,
+                and curated export.
+              </p>
+            </div>
+
+            <div class="curation-screens">
+              <figure>
+                <button class="zoomable-dashboard" type="button" aria-label="Zoom review list screenshot">
+                  <img src="images/curation_first.png" alt="Curation list showing teacher records and review actions" />
+                </button>
+                <figcaption>Review list</figcaption>
+              </figure>
+              <figure>
+                <button class="zoomable-dashboard" type="button" aria-label="Zoom export preview screenshot">
+                  <img src="images/curation_seond.png" alt="JSON export preview showing curated teacher record fields" />
+                </button>
+                <figcaption>Export preview</figcaption>
+              </figure>
+            </div>
+
+            <div class="curation-points" aria-label="Data curation workflow points">
+              <article class="fragment" data-fragment-index="0">
+                <strong>Inspect</strong>
+                <span>Product data, preferences, result, explanation, confidence.</span>
+              </article>
+              <article class="fragment" data-fragment-index="1">
+                <strong>Decide</strong>
+                <span>Approve reliable records or exclude weak outputs.</span>
+              </article>
+              <article class="fragment" data-fragment-index="2">
+                <strong>Export</strong>
+                <span>Prepare reviewed fields for future Qwen2.5 + LoRA experiments.</span>
+              </article>
+            </div>
+
+            <div class="curation-flow" aria-label="Curated teacher record workflow">
+              <span>Received</span>
+              <span>Reviewed</span>
+              <span>Approved / Excluded</span>
+              <span>Exported</span>
+              <span>Student-model experiments</span>
+            </div>
+
+            <p class="curation-takeaway fragment" data-fragment-index="3">
+              Curation is the boundary between raw AI output and responsible model training.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-distillation-process-slide">
+          <div class="distillation-process-layout">
+            <div class="distillation-process-header">
+              <p class="problem-kicker">Distillation Process</p>
+              <h2>From Curated Batch to Qwen2.5 + LoRA Artifact</h2>
+              <p>
+                Curated records move through export, Colab training, artifact storage, and dashboard version tracking.
+              </p>
+            </div>
+
+            <div class="distillation-process-panels">
+              <figure>
+                <button class="zoomable-dashboard" type="button" aria-label="Zoom export batches screenshot">
+                  <img src="images/export_batches.png" alt="Dashboard export batches view showing reviewed batch readiness" />
+                </button>
+                <figcaption class="fragment" data-fragment-index="0">
+                  <strong>Export batches</strong>
+                  <span>Quality-checked JSONL batches</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <button class="zoomable-dashboard" type="button" aria-label="Zoom Colab training screenshot">
+                  <img src="images/colab_train.png" alt="Colab training notebook showing GPU handoff commands" />
+                </button>
+                <figcaption class="fragment" data-fragment-index="1">
+                  <strong>Colab handoff</strong>
+                  <span>Temporary GPU training workflow</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <button class="zoomable-dashboard" type="button" aria-label="Zoom model versions screenshot">
+                  <img src="images/modal_versions.png" alt="Dashboard model versions view showing artifact path and active status" />
+                </button>
+                <figcaption class="fragment" data-fragment-index="2">
+                  <strong>Model versions</strong>
+                  <span>Versioned artifacts and active test status</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="distillation-process-flow fragment" data-fragment-index="4" aria-label="Experimental distillation process">
+              <span>Approved records</span>
+              <span>Export batch</span>
+              <span>Colab job</span>
+              <span>LoRA adapter</span>
+              <span>Hugging Face artifact</span>
+              <span>Model version</span>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-qwen-slide">
+          <div class="qwen-layout">
+            <div class="qwen-content">
+              <p class="problem-kicker">Future Lightweight Model Pathway</p>
+              <h2>Artifact Ready, Inference Deferred</h2>
+
+              <div class="qwen-formula" aria-label="Future Qwen and LoRA model formula">
+                <div>
+                  <strong>Qwen2.5-3B-Instruct</strong>
+                  <span>base model</span>
+                </div>
+                <b>+</b>
+                <div>
+                  <strong>LabelWise LoRA adapter</strong>
+                  <span>versioned artifact</span>
+                </div>
+                <b>=</b>
+                <div>
+                  <strong>Future LabelWise student model</strong>
+                  <span>after loading + evaluation</span>
+                </div>
+              </div>
+
+              <div class="qwen-status-cards" aria-label="Future student model status">
+                <article class="fragment" data-fragment-index="0">
+                  <h3>Exists now</h3>
+                  <p>Adapter artifacts<br />Model versions<br />Active / standby status</p>
+                </article>
+                <article class="fragment" data-fragment-index="1">
+                  <h3>Not live yet</h3>
+                  <p>Hosted inference<br />Student API<br />Reliability evidence</p>
+                </article>
+                <article class="fragment" data-fragment-index="2">
+                  <h3>Deferred because</h3>
+                  <p>More curated data needed<br />Stronger evaluation needed<br />Deployment cost</p>
+                </article>
+              </div>
+
+            </div>
+
+            <figure class="qwen-visual">
+              <button class="zoomable-dashboard" type="button" aria-label="Zoom Hugging Face artifact screenshot">
+                <img src="images/huggingface.png" alt="Hugging Face repository screenshot showing versioned LabelWise LoRA adapter artifact files" />
+              </button>
+            </figure>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-evaluation-slide">
+          <div class="evaluation-layout">
+            <div class="evaluation-header">
+              <p class="problem-kicker">Evaluation Approach</p>
+              <h2>Evaluated as Decision Support, Not Certified Authority</h2>
+            </div>
+
+            <div class="evaluation-cards" aria-label="Evaluation evidence areas">
+              <article class="fragment" data-fragment-index="0">
+                <span>01</span>
+                <h3>Mobile workflow</h3>
+                <ul>
+                  <li>Preference setup</li>
+                  <li>Scan + OCR fallback</li>
+                  <li>Result history</li>
+                </ul>
+              </article>
+              <article class="fragment" data-fragment-index="1">
+                <span>02</span>
+                <h3>Analysis output</h3>
+                <ul>
+                  <li>Rule matches</li>
+                  <li>Explanation quality</li>
+                  <li>Confidence + uncertainty</li>
+                </ul>
+              </article>
+              <article class="fragment" data-fragment-index="2">
+                <span>03</span>
+                <h3>User-centered testing</h3>
+                <ul>
+                  <li>Closed testing</li>
+                  <li>Real-device feedback</li>
+                  <li>Layout corrections</li>
+                </ul>
+              </article>
+              <article class="fragment" data-fragment-index="3">
+                <span>04</span>
+                <h3>Backend readiness</h3>
+                <ul>
+                  <li>Teacher records</li>
+                  <li>Export batches</li>
+                  <li>Model version tracking</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="evaluation-boundary fragment" data-fragment-index="4">
+              <span>Feasibility</span>
+              <span>Explanations</span>
+              <span>Workflow completeness</span>
+              <span>Pipeline readiness</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-functional-slide">
+          <div class="functional-layout">
+            <div class="functional-header">
+              <p class="problem-kicker">Functional Evaluation</p>
+              <h2>Scan-to-Result Workflow Works End-to-End</h2>
+            </div>
+
+            <div class="functional-flow fragment" data-fragment-index="0" aria-label="Functional workflow tested">
+              <span>Preferences</span>
+              <span>Barcode scan</span>
+              <span>Product lookup</span>
+              <span>OCR fallback</span>
+              <span>Result page</span>
+              <span>Scan history</span>
+            </div>
+
+            <div class="functional-findings" aria-label="Functional evaluation findings">
+              <article class="fragment" data-fragment-index="1">
+                <h3>Mobile workflow verified</h3>
+                <ul>
+                  <li>Preference setup</li>
+                  <li>Barcode scan + OCR fallback</li>
+                  <li>Result page + history</li>
+                </ul>
+              </article>
+              <article class="fragment" data-fragment-index="2">
+                <h3>Analysis output inspected</h3>
+                <ul>
+                  <li>Rule matches</li>
+                  <li>Explanation quality</li>
+                  <li>Confidence + uncertainty</li>
+                </ul>
+              </article>
+              <article class="fragment" data-fragment-index="3">
+                <h3>Main limits</h3>
+                <ul>
+                  <li>Incomplete product records</li>
+                  <li>Image and label quality</li>
+                  <li>Wider Android testing needed</li>
+                </ul>
+              </article>
+            </div>
+
+            <p class="functional-takeaway fragment" data-fragment-index="4">
+              Complete workflow; reliability still depends on product data, OCR quality, and uncertainty handling.
+            </p>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-user-testing-slide">
+          <div class="user-testing-layout">
+            <div class="user-testing-header">
+              <p class="problem-kicker">User Testing and Feedback</p>
+              <h2>Testing Confirmed Value and Exposed Refinements</h2>
+            </div>
+
+            <div class="user-testing-board">
+              <section class="user-testing-list user-testing-validated" aria-label="Validated by testing">
+                <p>Confirmed value</p>
+                <ul>
+                  <li class="user-testing-tick fragment" data-fragment-index="0"><strong>Concept</strong><span>Users understood scan-to-result support.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="1"><strong>Workflow</strong><span>Less switching between translation, search, and AI tools.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="2"><strong>Result</strong><span>Explanation mattered, not only the final label.</span></li>
+                </ul>
+              </section>
+
+              <div class="user-testing-bridge" aria-hidden="true">
+                <span>real-device testing</span>
+                <b>→</b>
+                <span>prototype refinements</span>
+              </div>
+
+              <section class="user-testing-list user-testing-refined" aria-label="Issues and actions">
+                <p>Refinements identified</p>
+                <ul>
+                  <li class="user-testing-tick fragment" data-fragment-index="3"><strong>Repeated scanning</strong><span>Prevent repeat barcode scans in result flow.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="4"><strong>Device layout</strong><span>Samsung A54 showed responsive testing need.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="5"><strong>Data quality</strong><span>Incomplete records confirmed OCR fallback need.</span></li>
+                  <li class="user-testing-tick fragment" data-fragment-index="6"><strong>Improved UI flow</strong><span>Refined layout and interactions made the app feel more polished.</span></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-readiness-slide">
+          <div class="readiness-layout">
+            <div class="readiness-header">
+              <p class="problem-kicker">Backend and Model Readiness</p>
+              <h2>Pipeline Ready, Student Reliability Not Proven</h2>
+            </div>
+
+            <div class="readiness-boundary fragment" data-fragment-index="0">
+              <strong>Pipeline ready</strong>
+              <span>≠</span>
+              <strong>production-ready student model</strong>
+            </div>
+
+            <div class="readiness-columns">
+              <section class="readiness-column readiness-ready" aria-label="Ready now">
+                <h3>Ready now</h3>
+                <ul>
+                  <li class="fragment" data-fragment-index="1">Teacher records</li>
+                  <li class="fragment" data-fragment-index="2">Dashboard review</li>
+                  <li class="fragment" data-fragment-index="3">Export + training</li>
+                  <li class="fragment" data-fragment-index="4">Model registry</li>
+                </ul>
+              </section>
+
+              <section class="readiness-column readiness-limited" aria-label="Not ready yet">
+                <h3>Not ready yet</h3>
+                <ul>
+                  <li class="fragment" data-fragment-index="5">Export readiness</li>
+                  <li class="fragment" data-fragment-index="6">Student quality</li>
+                  <li class="fragment" data-fragment-index="7">Hosted inference</li>
+                </ul>
+              </section>
+            </div>
+
+            <p class="readiness-takeaway fragment" data-fragment-index="8">
+              This supports future curation and experimentation, not a reliable deployed student model.
+            </p>
+          </div>
+        </section>
       </div>
+    </div>
+
+    <div class="phone-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Enlarged mobile screen">
+      <button class="phone-lightbox-close" type="button" aria-label="Close enlarged screen">×</button>
+      <figure class="phone-lightbox-frame">
+        <img class="phone-lightbox-image" src="" alt="" />
+        <figcaption class="phone-lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
+    <div class="dashboard-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Enlarged dashboard screenshot">
+      <button class="dashboard-lightbox-close" type="button" aria-label="Close enlarged screenshot">×</button>
+      <figure class="dashboard-lightbox-frame">
+        <img class="dashboard-lightbox-image" src="" alt="" />
+        <figcaption class="dashboard-lightbox-caption"></figcaption>
+      </figure>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
@@ -1675,6 +2196,112 @@
         refreshSlideTheme();
       };
 
+      const phoneLightbox = document.querySelector(".phone-lightbox");
+      const phoneLightboxImage = document.querySelector(".phone-lightbox-image");
+      const phoneLightboxCaption = document.querySelector(".phone-lightbox-caption");
+      const phoneLightboxClose = document.querySelector(".phone-lightbox-close");
+      let lastZoomTrigger;
+      const dashboardLightbox = document.querySelector(".dashboard-lightbox");
+      const dashboardLightboxImage = document.querySelector(".dashboard-lightbox-image");
+      const dashboardLightboxCaption = document.querySelector(".dashboard-lightbox-caption");
+      const dashboardLightboxClose = document.querySelector(".dashboard-lightbox-close");
+      let lastDashboardZoomTrigger;
+
+      const closePhoneLightbox = () => {
+        const wasOpen = phoneLightbox?.classList.contains("is-open");
+        phoneLightbox?.classList.remove("is-open");
+        phoneLightbox?.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("has-phone-lightbox");
+        Reveal.configure({ keyboard: true });
+        if (wasOpen) lastZoomTrigger?.focus();
+      };
+
+      const openPhoneLightbox = (trigger) => {
+        const image = trigger.querySelector("img");
+        if (!image || !phoneLightbox || !phoneLightboxImage || !phoneLightboxCaption) return;
+
+        const caption = trigger.closest("figure")?.querySelector("figcaption")?.textContent?.trim();
+        lastZoomTrigger = trigger;
+        phoneLightboxImage.src = image.currentSrc || image.src;
+        phoneLightboxImage.alt = image.alt;
+        phoneLightboxCaption.textContent = caption || image.alt;
+        phoneLightbox.classList.add("is-open");
+        phoneLightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("has-phone-lightbox");
+        Reveal.configure({ keyboard: false });
+        phoneLightboxClose?.focus();
+      };
+
+      document.querySelectorAll(".zoomable-phone").forEach((trigger) => {
+        trigger.addEventListener("click", (event) => {
+          event.stopPropagation();
+          openPhoneLightbox(trigger);
+        });
+
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          openPhoneLightbox(trigger);
+        });
+      });
+
+      phoneLightboxClose?.addEventListener("click", closePhoneLightbox);
+      phoneLightbox?.addEventListener("click", (event) => {
+        if (event.target === phoneLightbox) closePhoneLightbox();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && phoneLightbox?.classList.contains("is-open")) {
+          closePhoneLightbox();
+        }
+      });
+
+      Reveal.on("slidechanged", closePhoneLightbox);
+
+      const closeDashboardLightbox = () => {
+        const wasOpen = dashboardLightbox?.classList.contains("is-open");
+        dashboardLightbox?.classList.remove("is-open");
+        dashboardLightbox?.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("has-dashboard-lightbox");
+        Reveal.configure({ keyboard: true });
+        if (wasOpen) lastDashboardZoomTrigger?.focus();
+      };
+
+      const openDashboardLightbox = (trigger) => {
+        const image = trigger.querySelector("img");
+        if (!image || !dashboardLightbox || !dashboardLightboxImage || !dashboardLightboxCaption) return;
+
+        const caption = trigger.closest("figure")?.querySelector("figcaption strong")?.textContent?.trim();
+        lastDashboardZoomTrigger = trigger;
+        dashboardLightboxImage.src = image.currentSrc || image.src;
+        dashboardLightboxImage.alt = image.alt;
+        dashboardLightboxCaption.textContent = caption || image.alt;
+        dashboardLightbox.classList.add("is-open");
+        dashboardLightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("has-dashboard-lightbox");
+        Reveal.configure({ keyboard: false });
+        dashboardLightboxClose?.focus();
+      };
+
+      document.querySelectorAll(".zoomable-dashboard").forEach((trigger) => {
+        trigger.addEventListener("click", (event) => {
+          event.stopPropagation();
+          openDashboardLightbox(trigger);
+        });
+      });
+
+      dashboardLightboxClose?.addEventListener("click", closeDashboardLightbox);
+      dashboardLightbox?.addEventListener("click", (event) => {
+        if (event.target === dashboardLightbox) closeDashboardLightbox();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && dashboardLightbox?.classList.contains("is-open")) {
+          closeDashboardLightbox();
+        }
+      });
+
+      Reveal.on("slidechanged", closeDashboardLightbox);
       Reveal.on("ready", refreshSlideState);
       Reveal.on("slidechanged", refreshSlideState);
     </script>
