@@ -2347,6 +2347,14 @@
       </figure>
     </div>
 
+    <div class="roadmap-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Enlarged roadmap image">
+      <button class="roadmap-lightbox-close" type="button" aria-label="Close enlarged image">×</button>
+      <figure class="roadmap-lightbox-frame">
+        <img class="roadmap-lightbox-image" src="" alt="" />
+        <figcaption class="roadmap-lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
     <script>
       Reveal.initialize({
@@ -2525,6 +2533,58 @@
       });
 
       Reveal.on("slidechanged", closeDashboardLightbox);
+
+      const roadmapLightbox = document.querySelector(".roadmap-lightbox");
+      const roadmapLightboxImage = document.querySelector(".roadmap-lightbox-image");
+      const roadmapLightboxCaption = document.querySelector(".roadmap-lightbox-caption");
+      const roadmapLightboxClose = document.querySelector(".roadmap-lightbox-close");
+      let lastRoadmapZoomTrigger;
+
+      const closeRoadmapLightbox = () => {
+        const wasOpen = roadmapLightbox?.classList.contains("is-open");
+        roadmapLightbox?.classList.remove("is-open");
+        roadmapLightbox?.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("has-roadmap-lightbox");
+        Reveal.configure({ keyboard: true });
+        if (wasOpen) lastRoadmapZoomTrigger?.focus();
+      };
+
+      const openRoadmapLightbox = (trigger) => {
+        const image = trigger.querySelector("img");
+        if (!image || !roadmapLightbox || !roadmapLightboxImage || !roadmapLightboxCaption) return;
+
+        const caption = trigger.closest(".future-step")?.querySelector("h4")?.textContent?.trim();
+        lastRoadmapZoomTrigger = trigger;
+        roadmapLightboxImage.src = image.currentSrc || image.src;
+        roadmapLightboxImage.alt = image.alt;
+        roadmapLightboxCaption.textContent = caption || image.alt;
+        roadmapLightbox.classList.add("is-open");
+        roadmapLightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("has-roadmap-lightbox");
+        Reveal.configure({ keyboard: false });
+        roadmapLightboxClose?.focus();
+      };
+
+      document.querySelectorAll(".future-step-thumb").forEach((trigger) => {
+        trigger.style.cursor = "pointer";
+        trigger.addEventListener("click", (event) => {
+          event.stopPropagation();
+          openRoadmapLightbox(trigger);
+        });
+      });
+
+      roadmapLightboxClose?.addEventListener("click", closeRoadmapLightbox);
+      roadmapLightbox?.addEventListener("click", (event) => {
+        if (event.target === roadmapLightbox) closeRoadmapLightbox();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && roadmapLightbox?.classList.contains("is-open")) {
+          closeRoadmapLightbox();
+        }
+      });
+
+      Reveal.on("slidechanged", closeRoadmapLightbox);
       Reveal.on("ready", refreshSlideState);
       Reveal.on("slidechanged", refreshSlideState);
 
