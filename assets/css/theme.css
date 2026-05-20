@@ -14602,9 +14602,15 @@ body.has-dashboard-lightbox {
 }
 
 .demo-transition-links p {
+  position: relative;
   margin: 0;
   padding-left: 18px;
   border-left: 4px solid var(--labelwise-green-deep);
+}
+
+.demo-transition-links .demo-app-link {
+  min-height: 106px;
+  padding-right: 116px;
 }
 
 .demo-transition-links p:nth-child(2) {
@@ -14646,6 +14652,18 @@ body.has-dashboard-lightbox {
 .demo-transition-links a:focus-visible {
   color: var(--novia-red);
   text-decoration: underline;
+}
+
+.demo-app-qr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 96px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(5, 28, 18, 0.1);
 }
 
 .demo-transition-footer {
