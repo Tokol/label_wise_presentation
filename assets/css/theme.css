@@ -14764,47 +14764,6 @@ body.has-dashboard-lightbox {
   line-height: 1.1;
 }
 
-.demo-interactive-note {
-  display: grid;
-  gap: 4px;
-  width: min(520px, 100%);
-  padding: 10px 14px;
-  border-left: 4px solid var(--labelwise-green-deep);
-  background: rgba(247, 255, 249, 0.88);
-}
-
-.demo-interactive-note span {
-  color: var(--novia-red);
-  font-size: 0.68rem;
-  font-weight: 950;
-  letter-spacing: 0.05em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.demo-interactive-note a {
-  color: #151515;
-  font-size: 0.82rem;
-  font-weight: 900;
-  line-height: 1.18;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-
-.demo-interactive-note a:hover,
-.demo-interactive-note a:focus-visible {
-  color: var(--novia-red);
-  text-decoration: underline;
-}
-
-.demo-interactive-note em {
-  color: #34443a;
-  font-size: 0.72rem;
-  font-style: normal;
-  font-weight: 780;
-  line-height: 1.2;
-}
-
 .reveal .demo-transition-layout .fragment {
   opacity: 0;
   transform: translateY(12px);
