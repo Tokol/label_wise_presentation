@@ -225,28 +225,28 @@
             </div>
 
             <div class="aim-flow" aria-label="Thesis aim flow">
-              <article class="fragment">
+              <article class="fragment" data-fragment-index="0">
                 <div class="aim-icon" aria-hidden="true">▦</div>
                 <span>01</span>
                 <h3>Product Input</h3>
                 <p>Barcode scan / label image</p>
                 <p>Product database / OCR</p>
               </article>
-              <article class="fragment">
+              <article class="fragment" data-fragment-index="1">
                 <div class="aim-icon" aria-hidden="true">◉</div>
                 <span>02</span>
                 <h3>Dietary Context</h3>
                 <p>Allergy / medical</p>
                 <p>Religious-cultural / ethical / lifestyle</p>
               </article>
-              <article class="fragment">
+              <article class="fragment" data-fragment-index="2">
                 <div class="aim-icon" aria-hidden="true">✦</div>
                 <span>03</span>
                 <h3>Hybrid Analysis</h3>
                 <p>Defined rules</p>
                 <p>GPT-4.1 interpretation</p>
               </article>
-              <article class="fragment">
+              <article class="fragment" data-fragment-index="3">
                 <div class="aim-icon" aria-hidden="true">✓</div>
                 <span>04</span>
                 <h3>Explainable Result</h3>
@@ -255,7 +255,7 @@
               </article>
             </div>
 
-            <p class="aim-boundary">
+            <p class="aim-boundary fragment" data-fragment-index="4">
               The goal is decision support, not final dietary authority.
             </p>
           </div>
@@ -2312,6 +2312,89 @@
             </div>
           </div>
         </section>
+
+        <section class="labelwise-image-slide labelwise-strategy-slide">
+          <div class="strategy-layout">
+            <div class="user-testing-header strategy-header">
+              <p class="problem-kicker">Strategic Future Positioning</p>
+              <h2>On-Device AI Is Both Opportunity and Risk</h2>
+            </div>
+
+            <div class="strategy-content">
+              <div class="strategy-matrix" aria-label="Strategic positioning for future platform AI">
+                <article class="strategy-card strategy-opportunity fragment" data-fragment-index="0">
+                  <span class="strategy-label">Opportunity</span>
+                  <h3>Platform AI Opportunity</h3>
+                  <p>Apple Intelligence and Android AICore/Gemini Nano show that AI is moving closer to the device.</p>
+                  <small>This could reduce cost, latency, privacy exposure, and dependence on external API calls.</small>
+                </article>
+
+                <article class="strategy-card strategy-opportunity fragment" data-fragment-index="1">
+                  <span class="strategy-label">Impact</span>
+                  <h3>Impact on LabelWise</h3>
+                  <p>If on-device AI becomes strong enough, some interpretation tasks may run locally instead of through GPT-4.1 or a hosted student model.</p>
+                  <small>This could make offline or privacy-preserving food label support more realistic.</small>
+                </article>
+
+                <article class="strategy-card strategy-risk fragment" data-fragment-index="2">
+                  <span class="strategy-label">Risk</span>
+                  <h3>Strategic Risk</h3>
+                  <p>Generic scan-and-explain features may become built-in phone utilities.</p>
+                  <small>Basic AI scanning alone may become less defensible.</small>
+                </article>
+
+                <article class="strategy-card strategy-response fragment" data-fragment-index="3">
+                  <span class="strategy-label">Response</span>
+                  <h3>LabelWise Differentiation</h3>
+                  <p>LabelWise must specialize through domain depth.</p>
+                  <small>Curated dietary rules, reviewed ingredient mappings, explicit preferences, accessibility, uncertainty handling, and local validation.</small>
+                </article>
+              </div>
+
+              <figure class="strategy-visual">
+                <img src="images/built_in_transparent.png" alt="Built-in phone utility concept" />
+                <figcaption>Built-in utility risk</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="labelwise-image-slide labelwise-demo-transition-slide">
+          <div class="demo-transition-layout">
+            <div class="demo-transition-brand">
+              <button class="demo-transition-logo-button" type="button" aria-label="Show demo transition message">
+                <img src="images/logo_transparent_background.png" alt="LabelWise logo" />
+                <span class="demo-transition-bubble demo-transition-bubble-primary">Ready for the demo?</span>
+                <span class="demo-transition-bubble demo-transition-bubble-secondary">Let&rsquo;s scan.</span>
+              </button>
+              <p>LabelWise</p>
+            </div>
+
+            <div class="demo-transition-copy">
+              <p class="problem-kicker">DEMO TRANSITION</p>
+              <h2>Thank You</h2>
+              <p class="demo-transition-statement">The presentation now moves from the thesis summary to a short demonstration of the implemented LabelWise app and backend dashboard.</p>
+
+              <div class="demo-transition-links" aria-label="Demo links">
+                <p class="fragment" data-fragment-index="0">
+                  <span>Mobile application</span>
+                  <strong>LabelWise Android app</strong>
+                  <a href="#" aria-label="Placeholder Play Store link">Play Store link: add link</a>
+                </p>
+                <p class="fragment" data-fragment-index="1">
+                  <span>Backend dashboard</span>
+                  <strong>Admin dashboard</strong>
+                  <a href="https://label-wsie-dashboard.onrender.com/">https://label-wsie-dashboard.onrender.com/</a>
+                </p>
+              </div>
+
+              <div class="demo-transition-footer fragment" data-fragment-index="2">
+                <p>Full references are included in the thesis manuscript. Source code and deployment links are provided in Appendix A.</p>
+                <strong>Questions and discussion</strong>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -2343,6 +2426,8 @@
 
       const pandaButton = document.querySelector(".labelwise-logo-button");
       let pandaAnimationTimer;
+      const demoLogoButton = document.querySelector(".demo-transition-logo-button");
+      let demoLogoAnimationTimer;
 
       pandaButton?.addEventListener("click", () => {
         pandaButton.classList.remove("is-scanning");
@@ -2351,7 +2436,17 @@
         clearTimeout(pandaAnimationTimer);
         pandaAnimationTimer = setTimeout(() => {
           pandaButton.classList.remove("is-scanning");
-        }, 5800);
+        }, 4800);
+      });
+
+      demoLogoButton?.addEventListener("click", () => {
+        demoLogoButton.classList.remove("is-demo-ready");
+        void demoLogoButton.offsetWidth;
+        demoLogoButton.classList.add("is-demo-ready");
+        clearTimeout(demoLogoAnimationTimer);
+        demoLogoAnimationTimer = setTimeout(() => {
+          demoLogoButton.classList.remove("is-demo-ready");
+        }, 3400);
       });
 
       const refreshDifficultyAnimation = () => {
