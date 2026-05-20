@@ -90,7 +90,12 @@
                 </div>
               </div>
 
-              <figure class="labelwise-phone-frame">
+              <figure
+                class="labelwise-phone-frame zoomable-phone"
+                tabindex="0"
+                role="button"
+                aria-label="Zoom LabelWise barcode scanning screen on title slide"
+              >
                 <img
                   class="labelwise-phone-screen"
                   src="images/screenshot/barcode_scan.jpg"
@@ -748,7 +753,12 @@
             </div>
 
             <div class="intro-visual fragment" data-fragment-index="1">
-              <figure class="labelwise-phone-frame intro-phone-frame">
+              <figure
+                class="labelwise-phone-frame intro-phone-frame zoomable-phone"
+                tabindex="0"
+                role="button"
+                aria-label="Zoom LabelWise personalized result screen"
+              >
                 <img
                   class="labelwise-phone-screen"
                   src="images/screenshot/result.jpg"
@@ -1044,8 +1054,13 @@
             <div class="architecture-flowchart architecture-flowchart-v2" aria-label="LabelWise system architecture flowchart">
               <div class="architecture-current-row">
                 <article class="architecture-phone-card fragment" data-fragment-index="1">
-                <div class="architecture-phone-shell" aria-hidden="true">
-                  <img src="images/screenshot/barcode_scan.jpg" alt="" />
+                <div
+                  class="architecture-phone-shell zoomable-phone"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Zoom LabelWise barcode scanning screen in architecture flow"
+                >
+                  <img src="images/screenshot/barcode_scan.jpg" alt="LabelWise barcode scanning screen" />
                 </div>
                 <div class="architecture-phone-copy">
                   <span class="architecture-eyebrow">Mobile App</span>
@@ -1245,7 +1260,12 @@
 
             <div class="ocr-content">
               <figure class="ocr-phone-card">
-                <div class="ocr-phone-shell">
+                <div
+                  class="ocr-phone-shell zoomable-phone"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Zoom LabelWise product photo capture screen"
+                >
                   <img src="images/screenshot/capture_img.jpg" alt="LabelWise product photo capture screen" />
                 </div>
                 <figcaption>Fallback photo capture after weak barcode data</figcaption>
@@ -1413,9 +1433,13 @@
 
             <div class="rule-evidence-grid">
               <figure class="rule-code-shot fragment">
-                <div class="rule-code-crop">
+                <button
+                  class="rule-code-crop zoomable-dashboard"
+                  type="button"
+                  aria-label="Zoom contains_pork restriction dictionary screenshot"
+                >
                   <img src="images/screenshot/rules_2.png" alt="contains_pork restriction dictionary definition" />
-                </div>
+                </button>
                 <figcaption>Example restriction definition: <strong>contains_pork</strong></figcaption>
               </figure>
 
@@ -1560,7 +1584,12 @@
 
             <div class="confidence-content">
               <figure class="confidence-result-preview fragment" data-fragment-index="1">
-                <div class="confidence-phone-crop">
+                <div
+                  class="confidence-phone-crop zoomable-phone"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Zoom LabelWise confidence result screen"
+                >
                   <img src="images/screenshot/result.jpg" alt="LabelWise result screen showing unsafe result and confidence 86%" />
                 </div>
                 <figcaption>Confidence appears with the result, not alone</figcaption>
@@ -2489,6 +2518,15 @@
                   >Server</a>
                 </div>
                 <strong>QUESTIONS AND DISCUSSION</strong>
+                <p class="demo-interactive-note">
+                  <span>Interactive version</span>
+                  <a
+                    href="https://tokol.github.io/label_wise_presentation/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >https://tokol.github.io/label_wise_presentation/</a>
+                  <em>Arrow keys to navigate · F fullscreen · Esc exit</em>
+                </p>
               </div>
             </div>
           </div>

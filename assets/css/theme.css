@@ -10493,9 +10493,13 @@ body.has-dashboard-lightbox {
 }
 
 .rule-code-crop {
+  width: 100%;
+  padding: 0;
+  border: 0;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.86);
   box-shadow: 0 14px 28px rgba(18, 88, 58, 0.06);
+  cursor: zoom-in;
   overflow: hidden;
   max-height: 240px;
 }
@@ -10506,6 +10510,11 @@ body.has-dashboard-lightbox {
   height: auto;
   transform: scale(2);
   transform-origin: top left;
+}
+
+.rule-code-crop.zoomable-dashboard:hover img,
+.rule-code-crop.zoomable-dashboard:focus-visible img {
+  transform: scale(2) translateY(-2px);
 }
 
 .rule-code-shot figcaption {
@@ -14755,6 +14764,47 @@ body.has-dashboard-lightbox {
   line-height: 1.1;
 }
 
+.demo-interactive-note {
+  display: grid;
+  gap: 4px;
+  width: min(520px, 100%);
+  padding: 10px 14px;
+  border-left: 4px solid var(--labelwise-green-deep);
+  background: rgba(247, 255, 249, 0.88);
+}
+
+.demo-interactive-note span {
+  color: var(--novia-red);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.demo-interactive-note a {
+  color: #151515;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.18;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.demo-interactive-note a:hover,
+.demo-interactive-note a:focus-visible {
+  color: var(--novia-red);
+  text-decoration: underline;
+}
+
+.demo-interactive-note em {
+  color: #34443a;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 780;
+  line-height: 1.2;
+}
+
 .reveal .demo-transition-layout .fragment {
   opacity: 0;
   transform: translateY(12px);
@@ -14769,6 +14819,52 @@ body.has-dashboard-lightbox {
 /* Keep slide titles neutral while preserving green as an accent color. */
 .reveal .slides section.labelwise-image-slide h2 {
   color: #151515;
+}
+
+/* PDF export cleanup: avoid transparent-layer tiling artifacts in Chrome PDF. */
+@media print {
+  .labelwise-future-slide .future-step-thumb,
+  .labelwise-limitations-slide .limitation-node,
+  .labelwise-limitations-slide .limitations-takeaway {
+    background: #fff !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  .labelwise-future-slide .future-step-thumb::after,
+  .labelwise-limitations-slide .limitation-node::before {
+    display: none !important;
+  }
+
+  .labelwise-future-slide .future-step-thumb span,
+  .labelwise-limitations-slide .limitation-num {
+    box-shadow: none !important;
+  }
+}
+
+html.print-pdf .labelwise-future-slide .future-step-thumb,
+body.print-pdf .labelwise-future-slide .future-step-thumb,
+html.print-pdf .labelwise-limitations-slide .limitation-node,
+body.print-pdf .labelwise-limitations-slide .limitation-node,
+html.print-pdf .labelwise-limitations-slide .limitations-takeaway,
+body.print-pdf .labelwise-limitations-slide .limitations-takeaway {
+  background: #fff !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+html.print-pdf .labelwise-future-slide .future-step-thumb::after,
+body.print-pdf .labelwise-future-slide .future-step-thumb::after,
+html.print-pdf .labelwise-limitations-slide .limitation-node::before,
+body.print-pdf .labelwise-limitations-slide .limitation-node::before {
+  display: none !important;
+}
+
+html.print-pdf .labelwise-future-slide .future-step-thumb span,
+body.print-pdf .labelwise-future-slide .future-step-thumb span,
+html.print-pdf .labelwise-limitations-slide .limitation-num,
+body.print-pdf .labelwise-limitations-slide .limitation-num {
+  box-shadow: none !important;
 }
 
 @keyframes demoLogoPulse {
