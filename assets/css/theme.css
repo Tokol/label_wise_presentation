@@ -5143,6 +5143,126 @@ body.is-deck-fullscreen .checker-calibration-demo {
   opacity: 0.95;
 }
 
+/* ── Presentation Overview slide ── */
+.labelwise-roadmap-slide {
+  justify-content: center;
+}
+
+.roadmap-slide-layout {
+  width: min(1080px, 100%);
+  min-height: 580px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 22px;
+  align-items: center;
+}
+
+.roadmap-header h2 {
+  margin: 8px 0 0;
+  color: var(--labelwise-green-deep);
+  font-size: clamp(2.3rem, 4vw, 3.55rem);
+  font-weight: 950;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.roadmap-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 30px;
+  padding: 16px 0 4px;
+}
+
+.roadmap-grid::before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 50%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(34, 102, 70, 0.14), rgba(177, 42, 36, 0.18), rgba(34, 102, 70, 0.14));
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.roadmap-grid article {
+  position: relative;
+  z-index: 1;
+  min-height: 146px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+
+.roadmap-grid span {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: #edf6f0;
+  color: var(--labelwise-green-deep);
+  font-size: 0.82rem;
+  font-weight: 950;
+  line-height: 1;
+  box-shadow: 0 0 0 8px #fff, 0 12px 22px rgba(5, 28, 18, 0.08);
+}
+
+.roadmap-grid article:nth-child(even) span {
+  background: #fff0f0;
+  color: var(--novia-red);
+}
+
+.roadmap-grid h3 {
+  margin: 0 0 7px;
+  color: var(--labelwise-green-deep);
+  font-size: 0.9rem;
+  font-weight: 950;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.roadmap-grid p {
+  margin: 0;
+  color: rgba(41, 59, 48, 0.88);
+  font-size: 0.72rem;
+  font-weight: 760;
+  line-height: 1.32;
+}
+
+.roadmap-takeaway {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 15px 18px;
+  background: rgba(223, 240, 230, 0.38);
+  border-left: 4px solid var(--labelwise-green);
+  color: #26362d;
+  font-size: 0.92rem;
+  font-weight: 820;
+  line-height: 1.28;
+  text-align: left;
+}
+
+.reveal .roadmap-grid .fragment,
+.reveal .roadmap-takeaway.fragment {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 360ms ease, transform 360ms ease;
+}
+
+.reveal .roadmap-grid .fragment.visible,
+.reveal .roadmap-takeaway.fragment.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .labelwise-fixed-novia {
   left: 22px;
   bottom: 18px;

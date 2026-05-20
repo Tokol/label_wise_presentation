@@ -1,57 +1,60 @@
 1. Opening and thesis framing
 
-Title
-One-line problem
-Why food labels are hard
-Why this matters in Finland
-Thesis aim
-Research questions
+1. Title - LabelWise
+2. Presentation Overview - thesis structure and deck flow
+3. Decision Paralysis - food labels give information, but not always a personal decision
+4. Shopping Pressure - why food labels are hard to interpret
+5. Local Context - why this matters in Finland
+6. Thesis Aim - personalized food label interpretation
+7. Research Questions - from problem to evaluation
 
-2. Problem evidence and user study *
-7. Survey overview, 109 responses
-8. Main label difficulties
-9. Current workarounds
-10. Dietary needs and ingredient concerns
-11. App usefulness and privacy findings
-12. Requirements derived from survey
+2. Problem evidence and user study
 
-3. LabelWise solution*
-13. What LabelWise is
-14. What LabelWise is not
-15. Main workflow
-16. System architecture
-17. Barcode lookup and Open Food Facts
-18. OCR fallback
-19. Preference model
-20. Hybrid analysis engine
-21. Rule-based layer
-22. GPT-4.1 interpretation layer
-23. Confidence score explanation
-24. Result generation
+8. User Study Overview - survey evidence for requirements
+9. Main Label Difficulties - language leads, but it is not the only barrier
+10. Current Workarounds - support exists, but the workflow is fragmented
+11. Dietary Needs and Ingredient Concerns - same product, different dietary meaning
+12. App Usefulness and Privacy Findings - users wanted support, but also expected privacy
+13. Requirements Derived from Survey - from user evidence to LabelWise requirements
+
+3. LabelWise solution
+
+14. What LabelWise Is - from requirements to prototype
+15. System Boundaries - decision support, not final authority
+16. LabelWise Workflow - from product input to personalized result
+17. System Architecture - current app flow + student model pathway
+18. Product Data Retrieval - barcode lookup through Open Food Facts
+19. Product Data Fallback - OCR fallback starts with a valid label image
+20. Personalization Layer - survey-informed preference categories
+21. Hybrid Analysis Engine - rules first, AI for ambiguity and explanation
+22. Rule-Based Layer - known conflicts are checked first
+23. AI Interpretation Layer - structured interpretation, not free-form chat
+24. Confidence Score - confidence is a support signal, not a probability
+25. Result Output - judgement, explanation, and preference-level feedback
 
 4. Implementation
-25. Mobile app screens
-26. Preference setup screens
-27. Scan flow
-28. Result page
-29. Accessibility features
-30. Privacy and data handling
-31. Responsible knowledge distillation
-32. Backend review layer
-33. Data curation workflow
-34. Distillation process
-35. Future Qwen2.5 + LoRA pathway
+
+26. Mobile Prototype - complete mobile workflow implemented
+27. Accessibility and Inclusion - accessible scan feedback
+28. Privacy and Data Handling - personalization without unnecessary profiling
+29. Responsible Knowledge Distillation - distillation requires controlled teacher data
+30. Backend Review Layer - teacher records are reviewed before reuse
+31. Data Curation Layer - teacher records are not automatically training data
+32. Distillation Process - from curated batch to Qwen2.5 + LoRA artifact
+33. Future Lightweight Model Pathway - artifact ready, inference deferred
 
 5. Evaluation and discussion
-36. Evaluation approach
-37. Functional evaluation
-38. User testing feedback
-39. Backend/model readiness
-40. Limitations
-41. Research question answers
+
+34. Evaluation Approach - evaluated as decision support, not certified authority
+35. Functional Evaluation - scan-to-result workflow works end-to-end
+36. User Testing and Feedback - testing confirmed value and exposed refinements
+37. Backend and Model Readiness - pipeline ready, student reliability not proven
+38. Limitations - what constrains LabelWise reliability
+39. Conclusion and Synthesis - what the thesis answers
 
 6. Conclusion
-42. Main contributions
-43. Future work
-44. Final reflection
-45. Demo transition slide
+
+40. Thesis Contribution - main contributions of LabelWise
+41. Future Work Roadmap
+42. Strategic Future Positioning - on-device AI is both opportunity and risk
+43. Demo Transition - thank you, app demo, backend dashboard, and Q&A
