@@ -14138,6 +14138,52 @@ body.has-dashboard-lightbox {
   transform: translateY(0);
 }
 
+/* ── Key Insight synthesis slide ── */
+.labelwise-key-insight-slide {
+  justify-content: center;
+}
+
+.key-insight-layout {
+  width: min(1180px, 100%);
+  min-height: 580px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.key-insight-header {
+  text-align: left;
+}
+
+.key-insight-header h2 {
+  margin: 6px 0 0;
+  color: var(--labelwise-green-deep);
+  font-size: clamp(1.9rem, 3.4vw, 3.1rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1.02;
+}
+
+.key-insight-visual {
+  margin: 0;
+  width: 100%;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  align-self: center;
+}
+
+.key-insight-visual img {
+  display: block;
+  width: min(100%, 1120px);
+  height: auto;
+  max-height: 430px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 28px rgba(5, 28, 18, 0.08));
+}
+
 /* ── Future Development slide ── */
 .labelwise-future-slide {
   justify-content: center;
