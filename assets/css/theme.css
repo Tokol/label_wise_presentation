@@ -14616,10 +14616,49 @@ body.has-dashboard-lightbox {
   line-height: 1.38;
 }
 
+.demo-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  color: #34443a;
+  font-size: 0.72rem;
+  font-weight: 820;
+  line-height: 1.2;
+}
+
+.demo-source-label {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  color: var(--novia-red);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.demo-source-label svg {
+  width: 0.86rem;
+  height: 0.86rem;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.demo-source-links a {
+  color: #263f32;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.demo-source-links a:hover,
+.demo-source-links a:focus-visible {
+  color: var(--novia-red);
+  text-decoration: underline;
+}
+
 .demo-transition-footer strong {
   display: inline-block;
   color: var(--novia-red);
-  font-size: 1.02rem;
+  font-size: 1.18rem;
   font-weight: 950;
   line-height: 1.1;
 }
