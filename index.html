@@ -2350,7 +2350,7 @@
             </div>
 
             <div class="future-steps" aria-label="Future work roadmap details">
-              <div class="future-step fragment" data-fragment-index="0">
+              <div class="future-step fragment zoomable-future" data-fragment-index="0" role="button" tabindex="0">
                 <div class="future-step-thumb">
                   <img src="images/road_1.png" alt="Real-world usage roadmap milestone" />
                   <span>01</span>
@@ -2361,7 +2361,7 @@
                 </div>
               </div>
 
-              <div class="future-step fragment" data-fragment-index="1">
+              <div class="future-step fragment zoomable-future" data-fragment-index="1" role="button" tabindex="0">
                 <div class="future-step-thumb">
                   <img src="images/road_2.png" alt="Curation and validation roadmap milestone" />
                   <span>02</span>
@@ -2372,7 +2372,7 @@
                 </div>
               </div>
 
-              <div class="future-step fragment" data-fragment-index="2">
+              <div class="future-step fragment zoomable-future" data-fragment-index="2" role="button" tabindex="0">
                 <div class="future-step-thumb">
                   <img src="images/road_3.png" alt="Expert and accessibility testing roadmap milestone" />
                   <span>03</span>
@@ -2383,7 +2383,7 @@
                 </div>
               </div>
 
-              <div class="future-step fragment" data-fragment-index="3">
+              <div class="future-step fragment zoomable-future" data-fragment-index="3" role="button" tabindex="0">
                 <div class="future-step-thumb">
                   <img src="images/road_4.png" alt="Knowledge expansion roadmap milestone" />
                   <span>04</span>
@@ -2394,7 +2394,7 @@
                 </div>
               </div>
 
-              <div class="future-step fragment" data-fragment-index="4">
+              <div class="future-step fragment zoomable-future" data-fragment-index="4" role="button" tabindex="0">
                 <div class="future-step-thumb">
                   <img src="images/road_5.png" alt="Model and infrastructure maturity roadmap milestone" />
                   <span>05</span>
@@ -2405,6 +2405,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -2693,6 +2694,7 @@
       const closeDashboardLightbox = () => {
         const wasOpen = dashboardLightbox?.classList.contains("is-open");
         dashboardLightbox?.classList.remove("is-open");
+        dashboardLightbox?.classList.remove("is-future-roadmap");
         dashboardLightbox?.setAttribute("aria-hidden", "true");
         document.body.classList.remove("has-dashboard-lightbox");
         Reveal.configure({ keyboard: true });
@@ -2703,11 +2705,26 @@
         const image = trigger.querySelector("img");
         if (!image || !dashboardLightbox || !dashboardLightboxImage || !dashboardLightboxCaption) return;
 
-        const caption = trigger.closest("figure")?.querySelector("figcaption strong")?.textContent?.trim();
+        const futureTitle = trigger.querySelector(".future-step-body h4")?.textContent?.trim();
+        const futureText = trigger.querySelector(".future-step-body p")?.textContent?.trim();
+        const isFutureRoadmap = Boolean(futureTitle && futureText);
+        const caption = futureTitle && futureText
+          ? `${futureTitle}\n${futureText}`
+          : trigger.closest("figure")?.querySelector("figcaption strong")?.textContent?.trim();
         lastDashboardZoomTrigger = trigger;
         dashboardLightboxImage.src = image.currentSrc || image.src;
         dashboardLightboxImage.alt = image.alt;
-        dashboardLightboxCaption.textContent = caption || image.alt;
+        dashboardLightbox.classList.toggle("is-future-roadmap", isFutureRoadmap);
+        dashboardLightboxCaption.replaceChildren();
+        if (isFutureRoadmap) {
+          const title = document.createElement("strong");
+          const text = document.createElement("span");
+          title.textContent = futureTitle;
+          text.textContent = futureText;
+          dashboardLightboxCaption.append(title, text);
+        } else {
+          dashboardLightboxCaption.textContent = caption || image.alt;
+        }
         dashboardLightbox.classList.add("is-open");
         dashboardLightbox.setAttribute("aria-hidden", "false");
         document.body.classList.add("has-dashboard-lightbox");
@@ -2718,6 +2735,19 @@
       document.querySelectorAll(".zoomable-dashboard").forEach((trigger) => {
         trigger.addEventListener("click", (event) => {
           event.stopPropagation();
+          openDashboardLightbox(trigger);
+        });
+      });
+
+      document.querySelectorAll(".zoomable-future").forEach((trigger) => {
+        trigger.addEventListener("click", (event) => {
+          event.stopPropagation();
+          openDashboardLightbox(trigger);
+        });
+
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
           openDashboardLightbox(trigger);
         });
       });
