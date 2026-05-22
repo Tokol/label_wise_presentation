@@ -14247,6 +14247,14 @@ body.has-dashboard-lightbox {
   filter: drop-shadow(0 18px 28px rgba(5, 28, 18, 0.08));
 }
 
+.key-insight-visual .zoomable-dashboard {
+  width: min(100%, 1120px);
+}
+
+.key-insight-visual .zoomable-dashboard img {
+  width: 100%;
+}
+
 /* ── Future Development slide ── */
 .labelwise-future-slide {
   justify-content: center;
