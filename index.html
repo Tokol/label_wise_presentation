@@ -1959,35 +1959,34 @@
           <div class="qwen-layout">
             <div class="qwen-content">
               <p class="problem-kicker">Future Lightweight Model Pathway</p>
-              <h2>Artifact Ready, Inference Deferred</h2>
 
               <div class="qwen-formula" aria-label="Future Qwen and LoRA model formula">
-                <div>
+                <div class="fragment" data-fragment-index="0">
                   <strong>Qwen2.5-3B-Instruct</strong>
                   <span>base model</span>
                 </div>
-                <b>+</b>
-                <div>
+                <b aria-hidden="true">+</b>
+                <div class="fragment" data-fragment-index="1">
                   <strong>LabelWise LoRA adapter</strong>
                   <span>versioned artifact</span>
                 </div>
-                <b>=</b>
-                <div>
-                  <strong>Future LabelWise student model</strong>
+                <b aria-hidden="true">=</b>
+                <div class="fragment" data-fragment-index="2">
+                  <strong>LabelWise student model</strong>
                   <span>after loading + evaluation</span>
                 </div>
               </div>
 
               <div class="qwen-status-cards" aria-label="Future student model status">
-                <article class="fragment" data-fragment-index="0">
+                <article class="fragment" data-fragment-index="3">
                   <h3>Exists now</h3>
                   <p>Adapter artifacts<br />Model versions<br />Active / standby status</p>
                 </article>
-                <article class="fragment" data-fragment-index="1">
+                <article class="fragment" data-fragment-index="4">
                   <h3>Not live yet</h3>
                   <p>Hosted inference<br />Student API<br />Reliability evidence</p>
                 </article>
-                <article class="fragment" data-fragment-index="2">
+                <article class="fragment" data-fragment-index="5">
                   <h3>Deferred because</h3>
                   <p>More curated data needed<br />Stronger evaluation needed<br />Deployment cost</p>
                 </article>
